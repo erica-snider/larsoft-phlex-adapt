@@ -1,0 +1,63 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataalg/test/DetectorInfo/DetectorClocksStandard_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "<SRCS>/lardataalg/test/DetectorInfo/clockstest_standard.fcl" "--skip-return-code" "247" "<BUILD>/lardataalg/bin/DetectorClocksStandard_test" "./clockstest_standard.fcl"
+Working Directory: <BUILD>/lardataalg/test/DetectorInfo/DetectorClocksStandard_test.d
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:.:<BUILD>/larcorealg/job
+ FW_SEARCH_PATH=path_list_prepend:<BUILD>/larcorealg/gdml
+Test timeout computed to be: 10000000
+Using default message facility configuration:
+   debugModules: [
+      "*"
+   ]
+   destinations: {
+      statistics: {
+         type: "cout"
+      }
+      stdout: {
+         categories: {
+            default: {
+               limit: -1
+            }
+         }
+         threshold: "DEBUG"
+         type: "cout"
+      }
+   }
+
+MessageFacility started.
+Complete configuration ('./clockstest_standard.fcl'):
+   process_name: "DetClocksStandardTest"
+   services: {
+      DetectorClocksService: {
+         ClockSpeedExternal: 3.125e1
+         ClockSpeedOptical: 64
+         ClockSpeedTPC: 5.0505
+         ClockSpeedTrigger: 16
+         DefaultBeamTime: 0
+         DefaultTrigTime: 0
+         FramePeriod: 4.05504e2
+         G4RefTime: 0
+         InheritClockConfig: true
+         TrigModuleName: ""
+         TriggerOffsetTPC: 0
+         service_provider: "DetectorClocksServiceStandard"
+      }
+   }
+
+clocks_test base setup complete.
+'DetectorClocksServiceStandard'
+405.504 us
+Trigger  time @ 0
+BeamGate time @ 0
+TrigOffsetTPC @ -0
+G4RefTime     @ 0
+TPC     Freq. @ 5.0505
+Optical Freq. @ 64
+Trigger Freq. @ 16
+External Freq. @ 31.25
+TPC start tick [tdc]             : 0
+TPC start tick from trigger [us] : 0
+TPC start tick from beam    [us] : 0
+TPC tdc=0 in tick     : 0
+0
+0
+clocks_test completed.

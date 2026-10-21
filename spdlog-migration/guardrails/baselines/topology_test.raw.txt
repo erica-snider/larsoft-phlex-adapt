@@ -1,0 +1,11 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/test/Geometry/topology_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/bin/topology_test"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/test/Geometry/topology_test.d
+Environment variables: 
+ FW_SEARCH_PATH=/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/fcl:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/job
+Test timeout computed to be: 10000000
+Running 1 test case...
+
+[1;32;49m*** No errors detected
+[0;39;49m

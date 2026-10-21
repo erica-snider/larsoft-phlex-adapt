@@ -1,0 +1,63 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataalg/test/DetectorInfo/DetectorClocksLArTPCdetector_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "<SRCS>/lardataalg/test/DetectorInfo/clockstest_lartpcdetector.fcl" "--skip-return-code" "247" "<BUILD>/lardataalg/bin/DetectorClocksStandard_test" "./clockstest_lartpcdetector.fcl"
+Working Directory: <BUILD>/lardataalg/test/DetectorInfo/DetectorClocksLArTPCdetector_test.d
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:.:<BUILD>/larcorealg/job
+ FW_SEARCH_PATH=path_list_prepend:<BUILD>/larcorealg/gdml
+Test timeout computed to be: 10000000
+Using default message facility configuration:
+   debugModules: [
+      "*"
+   ]
+   destinations: {
+      statistics: {
+         type: "cout"
+      }
+      stdout: {
+         categories: {
+            default: {
+               limit: -1
+            }
+         }
+         threshold: "DEBUG"
+         type: "cout"
+      }
+   }
+
+MessageFacility started.
+Complete configuration ('./clockstest_lartpcdetector.fcl'):
+   process_name: "DetClocksStandardTest"
+   services: {
+      DetectorClocksService: {
+         ClockSpeedExternal: 3.125e1
+         ClockSpeedOptical: 64
+         ClockSpeedTPC: 2
+         ClockSpeedTrigger: 16
+         DefaultBeamTime: 3200
+         DefaultTrigTime: 3200
+         FramePeriod: 1600
+         G4RefTime: -3200
+         InheritClockConfig: true
+         TrigModuleName: "triggersim"
+         TriggerOffsetTPC: -1600
+         service_provider: "DetectorClocksServiceStandard"
+      }
+   }
+
+clocks_test base setup complete.
+'DetectorClocksServiceStandard'
+1600 us
+Trigger  time @ 3200
+BeamGate time @ 3200
+TrigOffsetTPC @ -1600
+G4RefTime     @ -3200
+TPC     Freq. @ 2
+Optical Freq. @ 64
+Trigger Freq. @ 16
+External Freq. @ 31.25
+TPC start tick [tdc]             : 3200
+TPC start tick from trigger [us] : -1600
+TPC start tick from beam    [us] : -1600
+TPC tdc=0 in tick     : -3200
+3200
+3200
+clocks_test completed.

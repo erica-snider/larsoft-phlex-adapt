@@ -1,0 +1,10 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/larcorealg/test/Geometry/Decomposer_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/larcorealg/bin/Decomposer_test"
+Working Directory: <BUILD>/larcorealg/test/Geometry/Decomposer_test.d
+Environment variables: 
+ FW_SEARCH_PATH=<BUILD>/larcorealg/gdml
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:<BUILD>/larcorealg/job
+Test timeout computed to be: 10000000
+Running 2 test cases...
+
+*** No errors detected

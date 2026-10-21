@@ -1,0 +1,313 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataobj/test/RecoBase/TrackTrajectory_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/lardataobj/bin/TrackTrajectory_test"
+Working Directory: <BUILD>/lardataobj/test/RecoBase/TrackTrajectory_test.d
+Test timeout computed to be: 10000000
+Running 2 test cases...
+Default-constructed track trajectory dump with verbosity level 0:
+  invalid track trajectory with 0 points
+Default-constructed track trajectory dump with verbosity level 1:
+  invalid track trajectory with 0 points
+Default-constructed track trajectory dump with verbosity level 2:
+  invalid track trajectory with 0 points
+Default-constructed track trajectory dump with verbosity level 3:
+  invalid track trajectory with 0 points
+Default-constructed track trajectory dump with verbosity level 4:
+  invalid track trajectory with 0 points
+Default-constructed track trajectory dump with verbosity level 5:
+  invalid track trajectory with 0 points
+Default-constructed track trajectory dump with verbosity level 6:
+  invalid track trajectory with 0 points
+Default-constructed track trajectory dump with verbosity level 7:
+  invalid track trajectory with 0 points
+Track trajectory dump with verbosity level 0:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c
+Track trajectory dump with verbosity level 1:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c
+Track trajectory dump with verbosity level 2:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 29.3939 cm long
+Track trajectory dump with verbosity level 3:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 29.3939 cm long (with 12 invalid points)
+Track trajectory dump with verbosity level 4:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 29.3939 cm long (with 12 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad
+Track trajectory dump with verbosity level 5:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 29.3939 cm long (with 12 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#0] at ( -1 ; 0 ; 0 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index) <START>
+      [#1] { NoPoint } (no hit index)
+      [#3] { NoPoint } (no hit index)
+      [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#5] { NoPoint } (no hit index)
+      [#6] at ( 0 ; -1 ; 6 ) cm, ( -1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#9] { NoPoint } (no hit index)
+      [#10] at ( 0 ; 1 ; 10 ) cm, ( 1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#11] { NoPoint } (no hit index)
+      [#13] { NoPoint } (no hit index)
+      [#14] at ( 0 ; -1 ; 14 ) cm, ( -1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#15] { NoPoint } (no hit index)
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#18] at ( 0 ; 1 ; 18 ) cm, ( 1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#19] { NoPoint } (no hit index)
+      [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#21] { NoPoint } (no hit index)
+      [#23] { NoPoint } (no hit index)
+      [#24] at ( -1 ; 0 ; 24 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index) <END>
+Track trajectory dump with verbosity level 6:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 29.3939 cm long (with 12 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#0] at ( -1 ; 0 ; 0 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index) <START>
+      [#1] { NoPoint } (no hit index)
+      [#2] at ( 0 ; 1 ; 2 ) cm, ( 1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#3] { NoPoint } (no hit index)
+      [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#5] { NoPoint } (no hit index)
+      [#6] at ( 0 ; -1 ; 6 ) cm, ( -1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#7] { NoPoint } (no hit index)
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#9] { NoPoint } (no hit index)
+      [#10] at ( 0 ; 1 ; 10 ) cm, ( 1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#11] { NoPoint } (no hit index)
+      [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#13] { NoPoint } (no hit index)
+      [#14] at ( 0 ; -1 ; 14 ) cm, ( -1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#15] { NoPoint } (no hit index)
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#17] { NoPoint } (no hit index)
+      [#18] at ( 0 ; 1 ; 18 ) cm, ( 1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#19] { NoPoint } (no hit index)
+      [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#21] { NoPoint } (no hit index)
+      [#22] at ( 0 ; -1 ; 22 ) cm, ( -1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#23] { NoPoint } (no hit index)
+      [#24] at ( -1 ; 0 ; 24 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index) <END>
+Track trajectory dump with verbosity level 7:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 29.3939 cm long (with 12 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#0] at ( -1 ; 0 ; 0 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index) <START>
+      [#1] { NoPoint } (no hit index)
+      [#2] at ( 0 ; 1 ; 2 ) cm, ( 1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#3] { NoPoint } (no hit index)
+      [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#5] { NoPoint } (no hit index)
+      [#6] at ( 0 ; -1 ; 6 ) cm, ( -1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#7] { NoPoint } (no hit index)
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#9] { NoPoint } (no hit index)
+      [#10] at ( 0 ; 1 ; 10 ) cm, ( 1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#11] { NoPoint } (no hit index)
+      [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#13] { NoPoint } (no hit index)
+      [#14] at ( 0 ; -1 ; 14 ) cm, ( -1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#15] { NoPoint } (no hit index)
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#17] { NoPoint } (no hit index)
+      [#18] at ( 0 ; 1 ; 18 ) cm, ( 1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#19] { NoPoint } (no hit index)
+      [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -1 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#21] { NoPoint } (no hit index)
+      [#22] at ( 0 ; -1 ; 22 ) cm, ( -1 ; 0 ; 1 ) GeV/c { !NoPoint } (no hit index)
+      [#23] { NoPoint } (no hit index)
+      [#24] at ( -1 ; 0 ; 24 ) cm, ( 0 ; 1 ; 1 ) GeV/c { !NoPoint } (no hit index) <END>
+Momentumless trajectory dump with verbosity level 0:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )
+Momentumless trajectory dump with verbosity level 1:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 )
+Momentumless trajectory dump with verbosity level 2:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 29.3939 cm long
+Momentumless trajectory dump with verbosity level 3:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 29.3939 cm long (with 12 invalid points)
+Momentumless trajectory dump with verbosity level 4:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 29.3939 cm long (with 12 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad
+Momentumless trajectory dump with verbosity level 5:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 29.3939 cm long (with 12 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#0] at ( -1 ; 0 ; 0 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index) <START>
+      [#1] { NoPoint } (no hit index)
+      [#3] { NoPoint } (no hit index)
+      [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#5] { NoPoint } (no hit index)
+      [#6] at ( 0 ; -1 ; 6 ) cm, ( -0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#9] { NoPoint } (no hit index)
+      [#10] at ( 0 ; 1 ; 10 ) cm, ( 0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#11] { NoPoint } (no hit index)
+      [#13] { NoPoint } (no hit index)
+      [#14] at ( 0 ; -1 ; 14 ) cm, ( -0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#15] { NoPoint } (no hit index)
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#18] at ( 0 ; 1 ; 18 ) cm, ( 0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#19] { NoPoint } (no hit index)
+      [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#21] { NoPoint } (no hit index)
+      [#23] { NoPoint } (no hit index)
+      [#24] at ( -1 ; 0 ; 24 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index) <END>
+Momentumless trajectory dump with verbosity level 6:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 29.3939 cm long (with 12 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#0] at ( -1 ; 0 ; 0 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index) <START>
+      [#1] { NoPoint } (no hit index)
+      [#2] at ( 0 ; 1 ; 2 ) cm, ( 0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#3] { NoPoint } (no hit index)
+      [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#5] { NoPoint } (no hit index)
+      [#6] at ( 0 ; -1 ; 6 ) cm, ( -0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#7] { NoPoint } (no hit index)
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#9] { NoPoint } (no hit index)
+      [#10] at ( 0 ; 1 ; 10 ) cm, ( 0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#11] { NoPoint } (no hit index)
+      [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#13] { NoPoint } (no hit index)
+      [#14] at ( 0 ; -1 ; 14 ) cm, ( -0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#15] { NoPoint } (no hit index)
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#17] { NoPoint } (no hit index)
+      [#18] at ( 0 ; 1 ; 18 ) cm, ( 0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#19] { NoPoint } (no hit index)
+      [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#21] { NoPoint } (no hit index)
+      [#22] at ( 0 ; -1 ; 22 ) cm, ( -0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#23] { NoPoint } (no hit index)
+      [#24] at ( -1 ; 0 ; 24 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index) <END>
+Momentumless trajectory dump with verbosity level 7:
+  track trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 29.3939 cm long (with 12 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#0] at ( -1 ; 0 ; 0 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index) <START>
+      [#1] { NoPoint } (no hit index)
+      [#2] at ( 0 ; 1 ; 2 ) cm, ( 0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#3] { NoPoint } (no hit index)
+      [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#5] { NoPoint } (no hit index)
+      [#6] at ( 0 ; -1 ; 6 ) cm, ( -0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#7] { NoPoint } (no hit index)
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#9] { NoPoint } (no hit index)
+      [#10] at ( 0 ; 1 ; 10 ) cm, ( 0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#11] { NoPoint } (no hit index)
+      [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#13] { NoPoint } (no hit index)
+      [#14] at ( 0 ; -1 ; 14 ) cm, ( -0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#15] { NoPoint } (no hit index)
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#17] { NoPoint } (no hit index)
+      [#18] at ( 0 ; 1 ; 18 ) cm, ( 0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#19] { NoPoint } (no hit index)
+      [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -0.707107 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#21] { NoPoint } (no hit index)
+      [#22] at ( 0 ; -1 ; 22 ) cm, ( -0.707107 ; 0 ; 0.707107 ) { !NoPoint } (no hit index)
+      [#23] { NoPoint } (no hit index)
+      [#24] at ( -1 ; 0 ; 24 ) cm, ( 0 ; 0.707107 ; 0.707107 ) { !NoPoint } (no hit index) <END>
+Short trajectory dump with verbosity level 0:
+  track trajectory with 25 points at ( -1 ; 0 ; 8 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c
+Short trajectory dump with verbosity level 1:
+  track trajectory with 25 points at ( -1 ; 0 ; 8 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c  
+    ends at ( -1 ; 0 ; 16 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c
+Short trajectory dump with verbosity level 2:
+  track trajectory with 25 points at ( -1 ; 0 ; 8 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c  
+    ends at ( -1 ; 0 ; 16 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c running 8.94427 cm long
+Short trajectory dump with verbosity level 3:
+  track trajectory with 25 points at ( -1 ; 0 ; 8 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c  
+    ends at ( -1 ; 0 ; 16 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c running 8.94427 cm long (with 22 invalid points)
+Short trajectory dump with verbosity level 4:
+  track trajectory with 25 points at ( -1 ; 0 ; 8 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c  
+    ends at ( -1 ; 0 ; 16 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c running 8.94427 cm long (with 22 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad
+Short trajectory dump with verbosity level 5:
+  track trajectory with 25 points at ( -1 ; 0 ; 8 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c  
+    ends at ( -1 ; 0 ; 16 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c running 8.94427 cm long (with 22 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#0] { NoPoint } (no hit index)
+      [#1] { NoPoint } (no hit index)
+      [#3] { NoPoint } (no hit index)
+      [#4] { NoPoint } (no hit index)
+      [#5] { NoPoint } (no hit index)
+      [#6] { NoPoint } (no hit index)
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 0.707107 ; 0.707107 ) GeV/c { !NoPoint } (no hit index) <START>
+      [#9] { NoPoint } (no hit index)
+      [#10] { NoPoint } (no hit index)
+      [#11] { NoPoint } (no hit index)
+      [#13] { NoPoint } (no hit index)
+      [#14] { NoPoint } (no hit index)
+      [#15] { NoPoint } (no hit index)
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 0.707107 ; 0.707107 ) GeV/c { !NoPoint } (no hit index) <END>
+      [#18] { NoPoint } (no hit index)
+      [#19] { NoPoint } (no hit index)
+      [#20] { NoPoint } (no hit index)
+      [#21] { NoPoint } (no hit index)
+      [#23] { NoPoint } (no hit index)
+      [#24] { NoPoint } (no hit index)
+Short trajectory dump with verbosity level 6:
+  track trajectory with 25 points at ( -1 ; 0 ; 8 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c  
+    ends at ( -1 ; 0 ; 16 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c running 8.94427 cm long (with 22 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#0] { NoPoint } (no hit index)
+      [#1] { NoPoint } (no hit index)
+      [#2] { NoPoint } (no hit index)
+      [#3] { NoPoint } (no hit index)
+      [#4] { NoPoint } (no hit index)
+      [#5] { NoPoint } (no hit index)
+      [#6] { NoPoint } (no hit index)
+      [#7] { NoPoint } (no hit index)
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 0.707107 ; 0.707107 ) GeV/c { !NoPoint } (no hit index) <START>
+      [#9] { NoPoint } (no hit index)
+      [#10] { NoPoint } (no hit index)
+      [#11] { NoPoint } (no hit index)
+      [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -0.707107 ; 0.707107 ) GeV/c { !NoPoint } (no hit index)
+      [#13] { NoPoint } (no hit index)
+      [#14] { NoPoint } (no hit index)
+      [#15] { NoPoint } (no hit index)
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 0.707107 ; 0.707107 ) GeV/c { !NoPoint } (no hit index) <END>
+      [#17] { NoPoint } (no hit index)
+      [#18] { NoPoint } (no hit index)
+      [#19] { NoPoint } (no hit index)
+      [#20] { NoPoint } (no hit index)
+      [#21] { NoPoint } (no hit index)
+      [#22] { NoPoint } (no hit index)
+      [#23] { NoPoint } (no hit index)
+      [#24] { NoPoint } (no hit index)
+Short trajectory dump with verbosity level 7:
+  track trajectory with 25 points at ( -1 ; 0 ; 8 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c  
+    ends at ( -1 ; 0 ; 16 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1 GeV/c running 8.94427 cm long (with 22 invalid points)
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#0] { NoPoint } (no hit index)
+      [#1] { NoPoint } (no hit index)
+      [#2] { NoPoint } (no hit index)
+      [#3] { NoPoint } (no hit index)
+      [#4] { NoPoint } (no hit index)
+      [#5] { NoPoint } (no hit index)
+      [#6] { NoPoint } (no hit index)
+      [#7] { NoPoint } (no hit index)
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 0.707107 ; 0.707107 ) GeV/c { !NoPoint } (no hit index) <START>
+      [#9] { NoPoint } (no hit index)
+      [#10] { NoPoint } (no hit index)
+      [#11] { NoPoint } (no hit index)
+      [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -0.707107 ; 0.707107 ) GeV/c { !NoPoint } (no hit index)
+      [#13] { NoPoint } (no hit index)
+      [#14] { NoPoint } (no hit index)
+      [#15] { NoPoint } (no hit index)
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 0.707107 ; 0.707107 ) GeV/c { !NoPoint } (no hit index) <END>
+      [#17] { NoPoint } (no hit index)
+      [#18] { NoPoint } (no hit index)
+      [#19] { NoPoint } (no hit index)
+      [#20] { NoPoint } (no hit index)
+      [#21] { NoPoint } (no hit index)
+      [#22] { NoPoint } (no hit index)
+      [#23] { NoPoint } (no hit index)
+      [#24] { NoPoint } (no hit index)
+
+*** No errors detected

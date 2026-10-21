@@ -1,0 +1,129 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/test/Geometry/geometry_iterator_loop_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/srcs/larcorealg/test/Geometry/test_geometry_iterator_loop.fcl" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/bin/geometry_iterator_loop_test" "./test_geometry_iterator_loop.fcl"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/test/Geometry/geometry_iterator_loop_test.d
+Environment variables: 
+ FW_SEARCH_PATH=/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml
+ FHICL_FILE_PATH=.:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/job
+ FW_SEARCH_PATH=/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/fcl:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/job
+Test timeout computed to be: 10000000
+removed 'debug.log'
+%MSG-i MessageFacility:  Early 25-Sep-2026 13:42:39 CDT Initialization
+MessageFacility started.
+%MSG
+%MSG-i Configuration:  main 25-Sep-2026 13:42:39 CDT Initialization
+Complete configuration ('./test_geometry_iterator_loop.fcl'):
+   outputs: {}
+   physics: {
+      ana: [
+         "geoitertest"
+      ]
+      analyzers: {
+         geoitertest: {
+            module_type: "GeometryIteratorLoopTest"
+         }
+      }
+      end_paths: [
+         "ana"
+      ]
+      trigger_paths: []
+   }
+   process_name: "testGeoIter"
+   services: {
+      AuxDetGeometry: {
+         GDML: "LArTPCdetector.gdml"
+      }
+      Geometry: {
+         GDML: "LArTPCdetector.gdml"
+         SortingParameters: {
+            tool_type: "GeoObjectSorterStandard"
+         }
+         SurfaceY: 690
+      }
+      GeometryConfigurationWriter: {}
+      WireReadout: {
+         service_provider: "StandardWireReadout"
+      }
+      message: {
+         destinations: {
+            LogDebugFile: {
+               append: false
+               categories: {
+                  default: {
+                     limit: -1
+                  }
+               }
+               filename: "debug.log"
+               threshold: "DEBUG"
+               type: "file"
+            }
+            LogStandardError: {
+               categories: {
+                  default: {}
+}
+               threshold: "ERROR"
+               type: "cerr"
+}
+            LogStandardOut: {
+               categories: {
+                  AnaBaseDefaultCtor: {
+                     limit: 0
+                  }
+                  GeometryBadInputPoint: {
+                     limit: 5
+                     timespan: 1000
+                  }
+                  RecoBaseDefaultCtor: {
+                     limit: 0
+                  }
+                  default: {
+                     limit: -1
+                  }
+               }
+               threshold: "INFO"
+               type: "cout"
+            }
+         }
+      }
+   }
+   source: {
+      maxEvents: 1
+      module_type: "EmptyEvent"
+   }
+
+%MSG
+%MSG-i Test:  main 25-Sep-2026 13:42:39 CDT Initialization
+geometry_iterator_loop_test base setup complete.
+%MSG
+Info in <TGeoManager::Import>: Reading geometry from file: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml/LArTPCdetector.gdml
+Info in <TGeoManager::TGeoManager>: Geometry GDMLImport, Geometry imported from GDML created
+Info in <TGeoManager::SetTopVolume>: Top volume is volWorld. Master volume is volWorld
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+Info in <TGeoManager::CheckGeometry>: Fixing runtime shapes...
+Info in <TGeoManager::CheckGeometry>: ...Nothing to fix
+Info in <TGeoManager::CloseGeometry>: Counting nodes...
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CloseGeometry>: Building cache...
+Info in <TGeoManager::CountLevels>: max level = 5, max placements = 3456
+Info in <TGeoManager::CloseGeometry>: 9179 nodes/ 990 volume UID's in Geometry imported from GDML
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+%MSG-i GeometryCore:  main 25-Sep-2026 13:42:45 CDT Initialization
+Sorting volumes...
+%MSG
+%MSG-i GeometryCore:  main 25-Sep-2026 13:42:45 CDT Initialization
+New detector geometry loaded from
+	/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml/LArTPCdetector.gdml
+%MSG
+%MSG-i Test:  main 25-Sep-2026 13:42:45 CDT Initialization
+Test Geometry setup complete.
+%MSG
+%MSG-i WireReadoutStandardGeom:  main 25-Sep-2026 13:42:45 CDT Initialization
+Initializing standard wire-readout geometry...
+%MSG
+We have 1 cryostats
+%MSG-i Test:  main 25-Sep-2026 13:42:45 CDT Initialization
+Test completed.
+%MSG
+%MSG-i Test:  main 25-Sep-2026 13:42:45 CDT Initialization
+geometry_iterator_loop_test completed.
+%MSG

@@ -1,0 +1,438 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/DetectorInfo/DetectorPropertiesLArTPCdetector_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/srcs/lardataalg/test/DetectorInfo/dettest_lartpcdetector.fcl" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/bin/DetectorPropertiesStandard_test" "./dettest_lartpcdetector.fcl"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/DetectorInfo/DetectorPropertiesLArTPCdetector_test.d
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:.:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/job:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/job
+ FW_SEARCH_PATH=path_list_prepend:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml
+Test timeout computed to be: 10000000
+Using default message facility configuration:
+   debugModules: [
+      "*"
+   ]
+   destinations: {
+      statistics: {
+         type: "cout"
+      }
+      stdout: {
+         categories: {
+            default: {
+               limit: -1
+            }
+         }
+         threshold: "DEBUG"
+         type: "cout"
+      }
+   }
+
+%MSG-i MessageFacility:  Early 25-Sep-2026 13:42:46 CDT Initialization
+MessageFacility started.
+%MSG
+%MSG-i Configuration:  main 25-Sep-2026 13:42:46 CDT Initialization
+Complete configuration ('./dettest_lartpcdetector.fcl'):
+   process_name: "DetPropStandardTest"
+   services: {
+      AuxDetGeometry: {
+         GDML: "LArTPCdetector.gdml"
+      }
+      DetectorClocksService: {
+         ClockSpeedExternal: 3.125e1
+         ClockSpeedOptical: 64
+         ClockSpeedTPC: 2
+         ClockSpeedTrigger: 16
+         DefaultBeamTime: 3200
+         DefaultTrigTime: 3200
+         FramePeriod: 1600
+         G4RefTime: -3200
+         InheritClockConfig: true
+         TrigModuleName: "triggersim"
+         TriggerOffsetTPC: -1600
+         service_provider: "DetectorClocksServiceStandard"
+      }
+      DetectorPropertiesService: {
+         DriftVelFudgeFactor: 1
+         Efield: [
+            5e-1,
+            6.66e-1,
+            8e-1
+         ]
+         Electronlifetime: 3000
+         ElectronsToADC: 6.8906513e-3
+         IncludeInterPlanePitchInXTickOffsets: true
+         InheritNumberTimeSamples: true
+         NumberTimeSamples: 9600
+         ReadOutWindowSize: 9600
+         SimpleBoundaryProcess: true
+         SternheimerA: 1.956e-1
+         SternheimerCbar: 5.2146
+         SternheimerK: 3
+         SternheimerX0: 2e-1
+         SternheimerX1: 3
+         Temperature: 87
+         TimeOffsetU: 0
+         TimeOffsetV: 0
+         TimeOffsetZ: 0
+         UseIcarusMicrobooneDriftModel: false
+         service_provider: "DetectorPropertiesServiceStandard"
+      }
+      Geometry: {
+         GDML: "LArTPCdetector.gdml"
+         SortingParameters: {
+            tool_type: "GeoObjectSorterStandard"
+         }
+         SurfaceY: 690
+      }
+      GeometryConfigurationWriter: {}
+      LArPropertiesService: {
+         AbsLengthEnergies: [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+         ]
+         AbsLengthSpectrum: [
+            8000,
+            8000,
+            8000,
+            8000,
+            8000,
+            2000,
+            2000,
+            2000
+         ]
+         AlphaScintYield: 16800
+         AlphaScintYieldRatio: 5.6e-1
+         Argon39DecayRate: 0
+         AtomicMass: 3.9948e1
+         AtomicNumber: 18
+         ElectronScintYield: 20000
+         ElectronScintYieldRatio: 2.7e-1
+         EnableCerenkovLight: true
+         ExcitationEnergy: 188
+         FastScintEnergies: [
+            7.2,
+            7.9,
+            8.3,
+            8.6,
+            8.9,
+            9.1,
+            9.3,
+            9.6,
+            9.7,
+            9.8,
+            10,
+            1.02e1,
+            1.03e1,
+            1.06e1,
+            11,
+            1.16e1,
+            1.19e1
+         ]
+         FastScintSpectrum: [
+            0,
+            4e-2,
+            1.2e-1,
+            2.7e-1,
+            4.4e-1,
+            6.2e-1,
+            8e-1,
+            9.1e-1,
+            9.2e-1,
+            8.5e-1,
+            7e-1,
+            5e-1,
+            3.1e-1,
+            1.3e-1,
+            4e-2,
+            1e-2,
+            0
+         ]
+         KaonScintYield: 24000
+         KaonScintYieldRatio: 2.3e-1
+         LoadExtraMatProperties: false
+         MuonScintYield: 24000
+         MuonScintYieldRatio: 2.3e-1
+         PionScintYield: 24000
+         PionScintYieldRatio: 2.3e-1
+         ProtonScintYield: 19200
+         ProtonScintYieldRatio: 2.9e-1
+         RIndexEnergies: [
+            1.18626,
+            1.68626,
+            2.18626,
+            2.68626,
+            3.18626,
+            3.68626,
+            4.18626,
+            4.68626,
+            5.18626,
+            5.68626,
+            6.18626,
+            6.68626,
+            7.18626,
+            7.68626,
+            8.18626,
+            8.68626,
+            9.18626,
+            9.68626,
+            1.01863e1,
+            1.06863e1,
+            1.11863e1
+         ]
+         RIndexSpectrum: [
+            1.24664,
+            1.2205,
+            1.22694,
+            1.22932,
+            1.23124,
+            1.23322,
+            1.23545,
+            1.23806,
+            1.24116,
+            1.24489,
+            1.24942,
+            1.25499,
+            1.26197,
+            1.2709,
+            1.28263,
+            1.29865,
+            1.32169,
+            1.35747,
+            1.42039,
+            1.56011,
+            2.16626
+         ]
+         RadiationLength: 1.955e1
+         RayleighEnergies: [
+            1.18626,
+            1.68626,
+            2.18626,
+            2.68626,
+            3.18626,
+            3.68626,
+            4.18626,
+            4.68626,
+            5.18626,
+            5.68626,
+            6.18626,
+            6.68626,
+            7.18626,
+            7.68626,
+            8.18626,
+            8.68626,
+            9.18626,
+            9.68626,
+            1.01863e1,
+            1.06863e1,
+            1.11863e1
+         ]
+         RayleighSpectrum: [
+            1.2008e6,
+            390747,
+            128633,
+            5.49691e4,
+            2.71918e4,
+            1.48537e4,
+            8.7169e3,
+            5.39742e3,
+            3.48137e3,
+            2.31651e3,
+            1.57763e3,
+            1.09202e3,
+            7.63045e2,
+            5.34232e2,
+            3.71335e2,
+            2.52942e2,
+            1.6538e2,
+            9.99003e1,
+            5.12653e1,
+            1.7495e1,
+            9.64341e-1
+         ]
+         ReflectiveSurfaceDiffuseFractions: [
+            [
+               5e-1,
+               5e-1,
+               5e-1
+            ]
+         ]
+         ReflectiveSurfaceEnergies: [
+            7,
+            9,
+            10
+         ]
+         ReflectiveSurfaceNames: [
+            "STEEL_STAINLESS_Fe7Cr2Ni"
+         ]
+         ReflectiveSurfaceReflectances: [
+            [
+               2.5e-1,
+               2.5e-1,
+               2.5e-1
+            ]
+         ]
+         ScintBirksConstant: 6.9e-2
+         ScintByParticleType: false
+         ScintFastTimeConst: 6
+         ScintPreScale: 3e-2
+         ScintResolutionScale: 1
+         ScintSlowTimeConst: 1590
+         ScintYield: 24000
+         ScintYieldRatio: 3e-1
+         SlowScintEnergies: [
+            7.2,
+            7.9,
+            8.3,
+            8.6,
+            8.9,
+            9.1,
+            9.3,
+            9.6,
+            9.7,
+            9.8,
+            10,
+            1.02e1,
+            1.03e1,
+            1.06e1,
+            11,
+            1.16e1,
+            1.19e1
+         ]
+         SlowScintSpectrum: [
+            0,
+            4e-2,
+            1.2e-1,
+            2.7e-1,
+            4.4e-1,
+            6.2e-1,
+            8e-1,
+            9.1e-1,
+            9.2e-1,
+            8.5e-1,
+            7e-1,
+            5e-1,
+            3.1e-1,
+            1.3e-1,
+            4e-2,
+            1e-2,
+            0
+         ]
+         TpbAbsorptionEnergies: [
+            5e-2,
+            1.77,
+            2.0675,
+            7.42,
+            7.75,
+            8.16,
+            8.73,
+            9.78,
+            1.069e1,
+            5.039e1
+         ]
+         TpbAbsorptionSpectrum: [
+            100000,
+            100000,
+            100000,
+            1e-3,
+            1e-11,
+            1e-11,
+            1e-11,
+            1e-11,
+            1e-11,
+            1e-11
+         ]
+         TpbEmmisionEnergies: [
+            5e-2,
+            1,
+            1.5,
+            2.25,
+            2.481,
+            2.819,
+            2.952,
+            2.988,
+            3.024,
+            3.1,
+            3.14,
+            3.1807,
+            3.54,
+            5.5,
+            5.039e1
+         ]
+         TpbEmmisionSpectrum: [
+            0,
+            0,
+            0,
+            5.88e-2,
+            2.35e-1,
+            8.53e-1,
+            1,
+            1,
+            9.259e-1,
+            7.04e-1,
+            2.96e-2,
+            1.1e-2,
+            0,
+            0,
+            0
+         ]
+         TpbTimeConstant: 2.5
+         service_provider: "LArPropertiesServiceStandard"
+      }
+      WireReadout: {
+         service_provider: "StandardWireReadout"
+      }
+   }
+
+%MSG
+%MSG-i Test:  main 25-Sep-2026 13:42:46 CDT Initialization
+detp_test base setup complete.
+%MSG
+Info in <TGeoManager::Import>: Reading geometry from file: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml/LArTPCdetector.gdml
+Info in <TGeoManager::TGeoManager>: Geometry GDMLImport, Geometry imported from GDML created
+Info in <TGeoManager::SetTopVolume>: Top volume is volWorld. Master volume is volWorld
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+Info in <TGeoManager::CheckGeometry>: Fixing runtime shapes...
+Info in <TGeoManager::CheckGeometry>: ...Nothing to fix
+Info in <TGeoManager::CloseGeometry>: Counting nodes...
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CloseGeometry>: Building cache...
+Info in <TGeoManager::CountLevels>: max level = 5, max placements = 3456
+Info in <TGeoManager::CloseGeometry>: 9179 nodes/ 990 volume UID's in Geometry imported from GDML
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+%MSG-i GeometryCore:  main 25-Sep-2026 13:42:47 CDT Initialization
+Sorting volumes...
+%MSG
+%MSG-i GeometryCore:  main 25-Sep-2026 13:42:47 CDT Initialization
+New detector geometry loaded from
+	/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml/LArTPCdetector.gdml
+%MSG
+%MSG-i Test:  main 25-Sep-2026 13:42:47 CDT Initialization
+Test Geometry setup complete.
+%MSG
+%MSG-i WireReadoutStandardGeom:  main 25-Sep-2026 13:42:47 CDT Initialization
+Initializing standard wire-readout geometry...
+%MSG
+Verified service implementation for LArPropertiesService: 'LArPropertiesServiceStandard'
+Verified service implementation for DetectorClocksService: 'DetectorClocksServiceStandard'
+Verified service implementation for DetectorPropertiesService: 'DetectorPropertiesServiceStandard'
+%MSG-i setupProvider<DetectorPropertiesStandard>:  main  25-Sep-2026 13:42:47 CDT Initialization
+Asked to ignore 1 keys: 'InheritNumberTimeSamples'
+%MSG
+Electric field in the active volume: 0.5 kV/cm
+Sampling rate:       500 ns
+Argon temperature:   87 K
+Argon density:       1.39295 kg/dm^3 (at 87 K)
+Argon density:       1.39295 kg/dm^3 (at 87 K)
+Drift velocity:      0.160563 cm/us
+Readout window:      9600 ticks (4800 us)
+TPC waveform length: 9600 ticks (4800 us)
+Drift distance:    255.4 cm
+Drift time:        1590.65 us, 3181.31 ticks
+%MSG-i Test:  main 25-Sep-2026 13:42:47 CDT Initialization
+Test completed.
+%MSG
+%MSG-i Test:  main 25-Sep-2026 13:42:47 CDT Initialization
+detp_test completed.
+%MSG

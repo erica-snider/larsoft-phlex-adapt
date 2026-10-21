@@ -1,0 +1,117 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/larcorealg/test/Geometry/geometry_standardchannelmapping_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "<SRCS>/larcorealg/test/Geometry/test_geometry.fcl" "--skip-return-code" "247" "<BUILD>/larcorealg/bin/geometry_standardchannelmapping_test" "./test_geometry.fcl"
+Working Directory: <BUILD>/larcorealg/test/Geometry/geometry_standardchannelmapping_test.d
+Environment variables: 
+ FW_SEARCH_PATH=<BUILD>/larcorealg/gdml
+ FHICL_FILE_PATH=.:<BUILD>/larcorealg/job
+ FW_SEARCH_PATH=<BUILD>/larcorealg/gdml
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:<BUILD>/larcorealg/job
+Test timeout computed to be: 10000000
+Boost.Test WARNING: token "./test_geometry.fcl" does not correspond to the Boost.Test argument 
+                    and should be placed after all Boost.Test arguments and the -- separator.
+                    For example: geometry_standardchannelmapping_test --random -- ./test_geometry.fcl
+MessageFacility started.
+Complete configuration ('./test_geometry.fcl'):
+   physics: {
+      ana: [
+         "geotest"
+      ]
+      analyzers: {
+         geotest: {
+            RunTests: [
+               "@default",
+               "+PrintWires"
+            ]
+            module_type: "GeometryTest"
+         }
+      }
+   }
+   process_name: "testGeo"
+   services: {
+      AuxDetGeometry: {
+         GDML: "LArTPCdetector.gdml"
+      }
+      Geometry: {
+         GDML: "LArTPCdetector.gdml"
+         SortingParameters: {
+            tool_type: "GeoObjectSorterStandard"
+         }
+         SurfaceY: 690
+      }
+      GeometryConfigurationWriter: {}
+      WireReadout: {
+         service_provider: "StandardWireReadout"
+      }
+      message: {
+         destinations: {
+            LogDebugFile: {
+               append: false
+               categories: {
+                  GeometryTest: {
+                     limit: -1
+                  }
+                  default: {
+                     limit: 0
+                  }
+               }
+               filename: "geometry_lartpcdetector.txt"
+               threshold: "INFO"
+               type: "file"
+            }
+            LogStandardError: {
+               categories: {
+                  default: {}
+}
+               threshold: "ERROR"
+               type: "cerr"
+}
+            LogStandardOut: {
+               categories: {
+                  AnaBaseDefaultCtor: {
+                     limit: 0
+                  }
+                  GeometryBadInputPoint: {
+                     limit: 5
+                     timespan: 1000
+                  }
+                  RecoBaseDefaultCtor: {
+                     limit: 0
+                  }
+                  default: {
+                     limit: -1
+                  }
+               }
+               threshold: "INFO"
+               type: "cout"
+            }
+         }
+      }
+   }
+   source: {
+      maxEvents: 1
+      module_type: "EmptyEvent"
+   }
+
+GeometryStandardChannelMappingTest base setup complete.
+Info in <TGeoManager::Import>: Reading geometry from file: <BUILD>/larcorealg/gdml/LArTPCdetector.gdml
+Info in <TGeoManager::TGeoManager>: Geometry GDMLImport, Geometry imported from GDML created
+Info in <TGeoManager::SetTopVolume>: Top volume is volWorld. Master volume is volWorld
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+Info in <TGeoManager::CheckGeometry>: Fixing runtime shapes...
+Info in <TGeoManager::CheckGeometry>: ...Nothing to fix
+Info in <TGeoManager::CloseGeometry>: Counting nodes...
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CloseGeometry>: Building cache...
+Info in <TGeoManager::CountLevels>: max level = 5, max placements = 3456
+Info in <TGeoManager::CloseGeometry>: 9179 nodes/ 990 volume UID's in Geometry imported from GDML
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+Sorting volumes...
+New detector geometry loaded from
+	<BUILD>/larcorealg/gdml/LArTPCdetector.gdml
+GeometryStandardChannelMappingTest Geometry setup complete.
+Initializing standard wire-readout geometry...
+Running 3 test cases...
+
+*** No errors detected
+GeometryStandardChannelMappingTest completed.
+GeometryStandardChannelMappingTest completed.

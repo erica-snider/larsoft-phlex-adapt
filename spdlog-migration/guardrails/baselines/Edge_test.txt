@@ -1,0 +1,15 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataobj/test/RecoBase/Edge_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/lardataobj/bin/Edge_test"
+Working Directory: <BUILD>/lardataobj/test/RecoBase/Edge_test.d
+Test timeout computed to be: 10000000
+Running 2 test cases...
+Printout of a default-constructed edge:  Edge ID 4294967295 has length   0.00 cm
+   - First Point ID: -999, second point ID: -999
+
+Printout of a value-constructed edge:  Edge ID 3 has length   3.00 cm
+   - First Point ID: 5, second point ID: 10
+
+Printout of a spacepoint-constructed edge:  Edge ID 0 has length  13.00 cm
+   - First Point ID: 0, second point ID: 1
+
+
+*** No errors detected

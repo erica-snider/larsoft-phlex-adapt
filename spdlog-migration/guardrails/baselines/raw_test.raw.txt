@@ -1,0 +1,67 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataobj/test/RawData/raw_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataobj/bin/raw_test"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataobj/test/RawData/raw_test.d
+Test timeout computed to be: 10000000
+Running 10 test cases...
+null input data (small size uncompressed): compressed data size: 64
+null input data (small size Huffman): compressed data size: 3
+null input data (medium size uncompressed): compressed data size: 9600
+null input data (medium size Huffman): compressed data size: 162
+null input data (large size uncompressed): compressed data size: 1048576
+null input data (large size Huffman): compressed data size: 17478
+constant input data (small size uncompressed): compressed data size: 64
+constant input data (small size Huffman): compressed data size: 3
+constant input data (medium size uncompressed): compressed data size: 9600
+constant input data (medium size Huffman): compressed data size: 162
+constant input data (large size uncompressed): compressed data size: 1048576
+constant input data (large size Huffman): compressed data size: 17478
+uniform small noise (small size uncompressed): compressed data size: 64
+uniform small noise (small size Huffman): compressed data size: 65
+uniform small noise (medium size uncompressed): compressed data size: 9600
+uniform small noise (medium size Huffman): compressed data size: 9259
+uniform small noise (large size uncompressed): compressed data size: 1048576
+uniform small noise (large size Huffman): compressed data size: 1010792
+uniform small noise and offset (small size uncompressed): compressed data size: 64
+uniform small noise and offset (small size Huffman): compressed data size: 64
+uniform small noise and offset (medium size uncompressed): compressed data size: 9600
+uniform small noise and offset (medium size Huffman): compressed data size: 9296
+uniform small noise and offset (large size uncompressed): compressed data size: 1048576
+uniform small noise and offset (large size Huffman): compressed data size: 1012765
+uniform large noise (small size uncompressed): compressed data size: 64
+uniform large noise (small size Huffman): compressed data size: 65
+uniform large noise (medium size uncompressed): compressed data size: 9600
+uniform large noise (medium size Huffman): compressed data size: 9598
+uniform large noise (large size uncompressed): compressed data size: 1048576
+uniform large noise (large size Huffman): compressed data size: 1047930
+Gaussian small noise and offset (small size uncompressed): compressed data size: 64
+Gaussian small noise and offset (small size Huffman): compressed data size: 57
+Gaussian small noise and offset (medium size uncompressed): compressed data size: 9600
+Gaussian small noise and offset (medium size Huffman): compressed data size: 8369
+Gaussian small noise and offset (large size uncompressed): compressed data size: 1048576
+Gaussian small noise and offset (large size Huffman): compressed data size: 911188
+Gaussian large noise and offset (small size uncompressed): compressed data size: 64
+Gaussian large noise and offset (small size Huffman): compressed data size: 65
+Gaussian large noise and offset (medium size uncompressed): compressed data size: 9600
+Gaussian large noise and offset (medium size Huffman): compressed data size: 9575
+Gaussian large noise and offset (large size uncompressed): compressed data size: 1048576
+Gaussian large noise and offset (large size Huffman): compressed data size: 1045774
+Very low frequency pure sine wave (small size uncompressed): compressed data size: 64
+Very low frequency pure sine wave (small size Huffman): compressed data size: 12
+Very low frequency pure sine wave (medium size uncompressed): compressed data size: 9600
+Very low frequency pure sine wave (medium size Huffman): compressed data size: 1081
+Very low frequency pure sine wave (large size uncompressed): compressed data size: 1048576
+Very low frequency pure sine wave (large size Huffman): compressed data size: 118453
+Low frequency pure sine wave (small size uncompressed): compressed data size: 64
+Low frequency pure sine wave (small size Huffman): compressed data size: 47
+Low frequency pure sine wave (medium size uncompressed): compressed data size: 9600
+Low frequency pure sine wave (medium size Huffman): compressed data size: 6901
+Low frequency pure sine wave (large size uncompressed): compressed data size: 1048576
+Low frequency pure sine wave (large size Huffman): compressed data size: 752793
+High frequency pure sine wave (small size uncompressed): compressed data size: 64
+High frequency pure sine wave (small size Huffman): compressed data size: 65
+High frequency pure sine wave (medium size uncompressed): compressed data size: 9600
+High frequency pure sine wave (medium size Huffman): compressed data size: 9601
+High frequency pure sine wave (large size uncompressed): compressed data size: 1048576
+High frequency pure sine wave (large size Huffman): compressed data size: 1048577
+
+[1;32;49m*** No errors detected
+[0;39;49m

@@ -1,0 +1,9 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataalg/test/DetectorInfo/DetectorTimingTypes_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/lardataalg/bin/DetectorTimingTypes_test"
+Working Directory: <BUILD>/lardataalg/test/DetectorInfo/DetectorTimingTypes_test.d
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:.:<BUILD>/larcorealg/job
+ FW_SEARCH_PATH=path_list_prepend:<BUILD>/larcorealg/gdml
+Test timeout computed to be: 10000000
+Running 1 test case...
+
+*** No errors detected

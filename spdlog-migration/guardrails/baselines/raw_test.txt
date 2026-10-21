@@ -1,0 +1,66 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataobj/test/RawData/raw_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/lardataobj/bin/raw_test"
+Working Directory: <BUILD>/lardataobj/test/RawData/raw_test.d
+Test timeout computed to be: 10000000
+Running 10 test cases...
+64
+3
+9600
+162
+1048576
+17478
+64
+3
+9600
+162
+1048576
+17478
+64
+65
+9600
+9259
+1048576
+1010792
+64
+64
+9600
+9296
+1048576
+1012765
+64
+65
+9600
+9598
+1048576
+1047930
+64
+57
+9600
+8369
+1048576
+911188
+64
+65
+9600
+9575
+1048576
+1045774
+64
+12
+9600
+1081
+1048576
+118453
+64
+47
+9600
+6901
+1048576
+752793
+64
+65
+9600
+9601
+1048576
+1048577
+
+*** No errors detected

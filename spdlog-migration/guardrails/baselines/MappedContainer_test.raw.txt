@@ -1,0 +1,13 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/Utilities/MappedContainer_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/bin/MappedContainer_test"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/Utilities/MappedContainer_test.d
+Test timeout computed to be: 10000000
+Running 2 test cases...
+Mapped element #0: -1
+Mapped element #1: 0
+Mapped element #2: nan
+Mapped element #3: -3
+Mapped element #4: -2
+Mapped element #5: nan
+
+[1;32;49m*** No errors detected
+[0;39;49m

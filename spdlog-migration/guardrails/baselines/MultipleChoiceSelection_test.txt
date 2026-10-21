@@ -1,0 +1,11 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataalg/test/Utilities/MultipleChoiceSelection_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/lardataalg/bin/MultipleChoiceSelection_test"
+Working Directory: <BUILD>/lardataalg/test/Utilities/MultipleChoiceSelection_test.d
+Test timeout computed to be: 10000000
+Running 1 test case...
+Options:
+ * "black" [=2]
+ * "gray" [=1] (aliases: "grey")
+ * "white" [=0] (aliases: "blanche")
+
+
+*** No errors detected

@@ -1,0 +1,25 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataobj/test/RecoBase/TrajectoryPointFlags_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataobj/bin/TrajectoryPointFlags_test"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataobj/test/RecoBase/TrajectoryPointFlags_test.d
+Test timeout computed to be: 10000000
+Running 2 test cases...
+Default-constructed flags, dump(verbosity=0):
+  {----:----:----:----:----:----:----:--0-} (no hit index)
+
+Default-constructed flags, dump(verbosity=1):
+  { !NoPoint } (no hit index)
+
+Flag-constructed flags, dump(verbosity=0):
+  {----:----:----:----:----:----:----:--11} (no hit index)
+
+Flag-constructed flags, dump(verbosity=1):
+  { HitIgnored, NoPoint } (no hit index)
+
+Bitmask-constructed flags, dump(verbosity=0):
+  {----:----:----:----:----:--1-:----:--10}, hit index: 12
+
+Bitmask-constructed flags, dump(verbosity=1):
+  { !HitIgnored, NoPoint, Rejected }, hit index: 12
+
+
+[1;32;49m*** No errors detected
+[0;39;49m

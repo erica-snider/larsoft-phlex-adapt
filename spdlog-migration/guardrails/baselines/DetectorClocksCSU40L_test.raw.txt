@@ -1,0 +1,71 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/DetectorInfo/DetectorClocksCSU40L_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/srcs/lardataalg/test/DetectorInfo/clockstest_csu40l.fcl" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/bin/DetectorClocksStandard_test" "./clockstest_csu40l.fcl"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/DetectorInfo/DetectorClocksCSU40L_test.d
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:.:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/job:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/job
+ FW_SEARCH_PATH=path_list_prepend:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml
+Test timeout computed to be: 10000000
+Using default message facility configuration:
+   debugModules: [
+      "*"
+   ]
+   destinations: {
+      statistics: {
+         type: "cout"
+      }
+      stdout: {
+         categories: {
+            default: {
+               limit: -1
+            }
+         }
+         threshold: "DEBUG"
+         type: "cout"
+      }
+   }
+
+%MSG-i MessageFacility:  Early 25-Sep-2026 13:42:46 CDT Initialization
+MessageFacility started.
+%MSG
+%MSG-i Configuration:  main 25-Sep-2026 13:42:46 CDT Initialization
+Complete configuration ('./clockstest_csu40l.fcl'):
+   process_name: "DetClocksStandardTest"
+   services: {
+      DetectorClocksService: {
+         ClockSpeedExternal: 3.125e1
+         ClockSpeedOptical: 64
+         ClockSpeedTPC: 5.0505
+         ClockSpeedTrigger: 16
+         DefaultBeamTime: 0
+         DefaultTrigTime: 0
+         FramePeriod: 4.05504e2
+         G4RefTime: 0
+         InheritClockConfig: true
+         TrigModuleName: ""
+         TriggerOffsetTPC: 0
+         service_provider: "DetectorClocksServiceStandard"
+      }
+   }
+
+%MSG
+%MSG-i Test:  main 25-Sep-2026 13:42:46 CDT Initialization
+clocks_test base setup complete.
+%MSG
+Verified service implementation for DetectorClocksService: 'DetectorClocksServiceStandard'
+TPC clock frame: 405.504 us
+Trigger  time @ 0
+BeamGate time @ 0
+TrigOffsetTPC @ -0
+G4RefTime     @ 0
+TPC     Freq. @ 5.0505
+Optical Freq. @ 64
+Trigger Freq. @ 16
+External Freq. @ 31.25
+TPC start tick [tdc]             : 0
+TPC start tick from trigger [us] : 0
+TPC start tick from beam    [us] : 0
+TPC tdc=0 in tick     : 0
+TPC G4 time 0 in tick : 0
+Trigger in TPC tick   : 0
+%MSG-i Test:  main 25-Sep-2026 13:42:46 CDT Initialization
+clocks_test completed.
+%MSG

@@ -1,0 +1,122 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataobj/test/RecoBase/Trajectory_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/lardataobj/bin/Trajectory_test"
+Working Directory: <BUILD>/lardataobj/test/RecoBase/Trajectory_test.d
+Test timeout computed to be: 10000000
+Running 2 test cases...
+Default-constructed trajectory dump with verbosity level 0:
+  invalid trajectory with 0 points
+Default-constructed trajectory dump with verbosity level 1:
+  invalid trajectory with 0 points
+Default-constructed trajectory dump with verbosity level 2:
+  invalid trajectory with 0 points
+Default-constructed trajectory dump with verbosity level 3:
+  invalid trajectory with 0 points
+Default-constructed trajectory dump with verbosity level 4:
+  invalid trajectory with 0 points
+Default-constructed trajectory dump with verbosity level 5:
+  invalid trajectory with 0 points
+Default-constructed trajectory dump with verbosity level 6:
+  invalid trajectory with 0 points
+Trajectory dump with verbosity level 0:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c
+Trajectory dump with verbosity level 1:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c
+Trajectory dump with verbosity level 2:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 30.2227 cm long
+Trajectory dump with verbosity level 3:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 30.2227 cm long
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad
+Trajectory dump with verbosity level 4:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 30.2227 cm long
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#2] at ( 0 ; 1 ; 2 ) cm, ( 1 ; 0 ; 1 ) GeV/c  [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -1 ; 1 ) GeV/c
+      [#7] at ( -0.707107 ; -0.707107 ; 7 ) cm, ( -0.707107 ; 0.707107 ; 1 ) GeV/c  [#9] at ( -0.707107 ; 0.707107 ; 9 ) cm, ( 0.707107 ; 0.707107 ; 1 ) GeV/c
+      [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -1 ; 1 ) GeV/c  [#14] at ( 0 ; -1 ; 14 ) cm, ( -1 ; 0 ; 1 ) GeV/c
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 1 ; 1 ) GeV/c  [#19] at ( 0.707107 ; 0.707107 ; 19 ) cm, ( 0.707107 ; -0.707107 ; 1 ) GeV/c
+      [#21] at ( 0.707107 ; -0.707107 ; 21 ) cm, ( -0.707107 ; -0.707107 ; 1 ) GeV/c
+Trajectory dump with verbosity level 5:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 30.2227 cm long
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#1] at ( -0.707107 ; 0.707107 ; 1 ) cm, ( 0.707107 ; 0.707107 ; 1 ) GeV/c  [#2] at ( 0 ; 1 ; 2 ) cm, ( 1 ; 0 ; 1 ) GeV/c
+      [#3] at ( 0.707107 ; 0.707107 ; 3 ) cm, ( 0.707107 ; -0.707107 ; 1 ) GeV/c  [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -1 ; 1 ) GeV/c
+      [#6] at ( 0 ; -1 ; 6 ) cm, ( -1 ; 0 ; 1 ) GeV/c  [#7] at ( -0.707107 ; -0.707107 ; 7 ) cm, ( -0.707107 ; 0.707107 ; 1 ) GeV/c
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 1 ; 1 ) GeV/c  [#9] at ( -0.707107 ; 0.707107 ; 9 ) cm, ( 0.707107 ; 0.707107 ; 1 ) GeV/c
+      [#10] at ( 0 ; 1 ; 10 ) cm, ( 1 ; 0 ; 1 ) GeV/c  [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -1 ; 1 ) GeV/c
+      [#13] at ( 0.707107 ; -0.707107 ; 13 ) cm, ( -0.707107 ; -0.707107 ; 1 ) GeV/c  [#14] at ( 0 ; -1 ; 14 ) cm, ( -1 ; 0 ; 1 ) GeV/c
+      [#15] at ( -0.707107 ; -0.707107 ; 15 ) cm, ( -0.707107 ; 0.707107 ; 1 ) GeV/c  [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 1 ; 1 ) GeV/c
+      [#18] at ( 0 ; 1 ; 18 ) cm, ( 1 ; 0 ; 1 ) GeV/c  [#19] at ( 0.707107 ; 0.707107 ; 19 ) cm, ( 0.707107 ; -0.707107 ; 1 ) GeV/c
+      [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -1 ; 1 ) GeV/c  [#21] at ( 0.707107 ; -0.707107 ; 21 ) cm, ( -0.707107 ; -0.707107 ; 1 ) GeV/c
+      [#22] at ( 0 ; -1 ; 22 ) cm, ( -1 ; 0 ; 1 ) GeV/c
+Trajectory dump with verbosity level 6:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) with momentum 1.41421 GeV/c running 30.2227 cm long
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#1] at ( -0.707107 ; 0.707107 ; 1 ) cm, ( 0.707107 ; 0.707107 ; 1 ) GeV/c  [#2] at ( 0 ; 1 ; 2 ) cm, ( 1 ; 0 ; 1 ) GeV/c
+      [#3] at ( 0.707107 ; 0.707107 ; 3 ) cm, ( 0.707107 ; -0.707107 ; 1 ) GeV/c  [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -1 ; 1 ) GeV/c
+      [#5] at ( 0.707107 ; -0.707107 ; 5 ) cm, ( -0.707107 ; -0.707107 ; 1 ) GeV/c  [#6] at ( 0 ; -1 ; 6 ) cm, ( -1 ; 0 ; 1 ) GeV/c
+      [#7] at ( -0.707107 ; -0.707107 ; 7 ) cm, ( -0.707107 ; 0.707107 ; 1 ) GeV/c  [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 1 ; 1 ) GeV/c
+      [#9] at ( -0.707107 ; 0.707107 ; 9 ) cm, ( 0.707107 ; 0.707107 ; 1 ) GeV/c  [#10] at ( 0 ; 1 ; 10 ) cm, ( 1 ; 0 ; 1 ) GeV/c
+      [#11] at ( 0.707107 ; 0.707107 ; 11 ) cm, ( 0.707107 ; -0.707107 ; 1 ) GeV/c  [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -1 ; 1 ) GeV/c
+      [#13] at ( 0.707107 ; -0.707107 ; 13 ) cm, ( -0.707107 ; -0.707107 ; 1 ) GeV/c  [#14] at ( 0 ; -1 ; 14 ) cm, ( -1 ; 0 ; 1 ) GeV/c
+      [#15] at ( -0.707107 ; -0.707107 ; 15 ) cm, ( -0.707107 ; 0.707107 ; 1 ) GeV/c  [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 1 ; 1 ) GeV/c
+      [#17] at ( -0.707107 ; 0.707107 ; 17 ) cm, ( 0.707107 ; 0.707107 ; 1 ) GeV/c  [#18] at ( 0 ; 1 ; 18 ) cm, ( 1 ; 0 ; 1 ) GeV/c
+      [#19] at ( 0.707107 ; 0.707107 ; 19 ) cm, ( 0.707107 ; -0.707107 ; 1 ) GeV/c  [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -1 ; 1 ) GeV/c
+      [#21] at ( 0.707107 ; -0.707107 ; 21 ) cm, ( -0.707107 ; -0.707107 ; 1 ) GeV/c  [#22] at ( 0 ; -1 ; 22 ) cm, ( -1 ; 0 ; 1 ) GeV/c
+      [#23] at ( -0.707107 ; -0.707107 ; 23 ) cm, ( -0.707107 ; 0.707107 ; 1 ) GeV/c
+Momentumless trajectory dump with verbosity level 0:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )
+Momentumless trajectory dump with verbosity level 1:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 )
+Momentumless trajectory dump with verbosity level 2:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 30.2227 cm long
+Momentumless trajectory dump with verbosity level 3:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 30.2227 cm long
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad
+Momentumless trajectory dump with verbosity level 4:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 30.2227 cm long
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#2] at ( 0 ; 1 ; 2 ) cm, ( 0.707107 ; 0 ; 0.707107 )  [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -0.707107 ; 0.707107 )
+      [#7] at ( -0.707107 ; -0.707107 ; 7 ) cm, ( -0.5 ; 0.5 ; 0.707107 )  [#9] at ( -0.707107 ; 0.707107 ; 9 ) cm, ( 0.5 ; 0.5 ; 0.707107 )
+      [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -0.707107 ; 0.707107 )  [#14] at ( 0 ; -1 ; 14 ) cm, ( -0.707107 ; 0 ; 0.707107 )
+      [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 0.707107 ; 0.707107 )  [#19] at ( 0.707107 ; 0.707107 ; 19 ) cm, ( 0.5 ; -0.5 ; 0.707107 )
+      [#21] at ( 0.707107 ; -0.707107 ; 21 ) cm, ( -0.5 ; -0.5 ; 0.707107 )
+Momentumless trajectory dump with verbosity level 5:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 30.2227 cm long
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#1] at ( -0.707107 ; 0.707107 ; 1 ) cm, ( 0.5 ; 0.5 ; 0.707107 )  [#2] at ( 0 ; 1 ; 2 ) cm, ( 0.707107 ; 0 ; 0.707107 )
+      [#3] at ( 0.707107 ; 0.707107 ; 3 ) cm, ( 0.5 ; -0.5 ; 0.707107 )  [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -0.707107 ; 0.707107 )
+      [#6] at ( 0 ; -1 ; 6 ) cm, ( -0.707107 ; 0 ; 0.707107 )  [#7] at ( -0.707107 ; -0.707107 ; 7 ) cm, ( -0.5 ; 0.5 ; 0.707107 )
+      [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 0.707107 ; 0.707107 )  [#9] at ( -0.707107 ; 0.707107 ; 9 ) cm, ( 0.5 ; 0.5 ; 0.707107 )
+      [#10] at ( 0 ; 1 ; 10 ) cm, ( 0.707107 ; 0 ; 0.707107 )  [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -0.707107 ; 0.707107 )
+      [#13] at ( 0.707107 ; -0.707107 ; 13 ) cm, ( -0.5 ; -0.5 ; 0.707107 )  [#14] at ( 0 ; -1 ; 14 ) cm, ( -0.707107 ; 0 ; 0.707107 )
+      [#15] at ( -0.707107 ; -0.707107 ; 15 ) cm, ( -0.5 ; 0.5 ; 0.707107 )  [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 0.707107 ; 0.707107 )
+      [#18] at ( 0 ; 1 ; 18 ) cm, ( 0.707107 ; 0 ; 0.707107 )  [#19] at ( 0.707107 ; 0.707107 ; 19 ) cm, ( 0.5 ; -0.5 ; 0.707107 )
+      [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -0.707107 ; 0.707107 )  [#21] at ( 0.707107 ; -0.707107 ; 21 ) cm, ( -0.5 ; -0.5 ; 0.707107 )
+      [#22] at ( 0 ; -1 ; 22 ) cm, ( -0.707107 ; 0 ; 0.707107 )
+Momentumless trajectory dump with verbosity level 6:
+  trajectory with 25 points at ( -1 ; 0 ; 0 ) cm toward ( 0 ; 0.707107 ; 0.707107 )  
+    ends at ( -1 ; 0 ; 24 ) cm toward ( 0 ; 0.707107 ; 0.707107 ) running 30.2227 cm long
+    starting with theta 0.785398 rad, phi 1.5708 rad; zenith: 2.35619 rad, azimuth: 0 rad through:
+      [#1] at ( -0.707107 ; 0.707107 ; 1 ) cm, ( 0.5 ; 0.5 ; 0.707107 )  [#2] at ( 0 ; 1 ; 2 ) cm, ( 0.707107 ; 0 ; 0.707107 )
+      [#3] at ( 0.707107 ; 0.707107 ; 3 ) cm, ( 0.5 ; -0.5 ; 0.707107 )  [#4] at ( 1 ; 0 ; 4 ) cm, ( 0 ; -0.707107 ; 0.707107 )
+      [#5] at ( 0.707107 ; -0.707107 ; 5 ) cm, ( -0.5 ; -0.5 ; 0.707107 )  [#6] at ( 0 ; -1 ; 6 ) cm, ( -0.707107 ; 0 ; 0.707107 )
+      [#7] at ( -0.707107 ; -0.707107 ; 7 ) cm, ( -0.5 ; 0.5 ; 0.707107 )  [#8] at ( -1 ; 0 ; 8 ) cm, ( 0 ; 0.707107 ; 0.707107 )
+      [#9] at ( -0.707107 ; 0.707107 ; 9 ) cm, ( 0.5 ; 0.5 ; 0.707107 )  [#10] at ( 0 ; 1 ; 10 ) cm, ( 0.707107 ; 0 ; 0.707107 )
+      [#11] at ( 0.707107 ; 0.707107 ; 11 ) cm, ( 0.5 ; -0.5 ; 0.707107 )  [#12] at ( 1 ; 0 ; 12 ) cm, ( 0 ; -0.707107 ; 0.707107 )
+      [#13] at ( 0.707107 ; -0.707107 ; 13 ) cm, ( -0.5 ; -0.5 ; 0.707107 )  [#14] at ( 0 ; -1 ; 14 ) cm, ( -0.707107 ; 0 ; 0.707107 )
+      [#15] at ( -0.707107 ; -0.707107 ; 15 ) cm, ( -0.5 ; 0.5 ; 0.707107 )  [#16] at ( -1 ; 0 ; 16 ) cm, ( 0 ; 0.707107 ; 0.707107 )
+      [#17] at ( -0.707107 ; 0.707107 ; 17 ) cm, ( 0.5 ; 0.5 ; 0.707107 )  [#18] at ( 0 ; 1 ; 18 ) cm, ( 0.707107 ; 0 ; 0.707107 )
+      [#19] at ( 0.707107 ; 0.707107 ; 19 ) cm, ( 0.5 ; -0.5 ; 0.707107 )  [#20] at ( 1 ; 0 ; 20 ) cm, ( 0 ; -0.707107 ; 0.707107 )
+      [#21] at ( 0.707107 ; -0.707107 ; 21 ) cm, ( -0.5 ; -0.5 ; 0.707107 )  [#22] at ( 0 ; -1 ; 22 ) cm, ( -0.707107 ; 0 ; 0.707107 )
+      [#23] at ( -0.707107 ; -0.707107 ; 23 ) cm, ( -0.5 ; 0.5 ; 0.707107 )
+
+*** No errors detected

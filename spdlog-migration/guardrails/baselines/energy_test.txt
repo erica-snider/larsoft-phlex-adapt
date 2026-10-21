@@ -1,0 +1,13 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataalg/test/Utilities/energy_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/lardataalg/bin/energy_test"
+Working Directory: <BUILD>/lardataalg/test/Utilities/energy_test.d
+Test timeout computed to be: 10000000
+Running 1 test case...
+Tested 13.6 eV
+Tested 34.8 meV
+Tested 662.6 ueV
+Tested 510.999 keV
+Tested 2.22452 MeV
+Tested 91.1876 GeV
+Tested 0.98 TeV
+
+*** No errors detected

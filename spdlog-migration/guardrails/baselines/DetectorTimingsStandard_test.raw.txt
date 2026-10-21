@@ -1,0 +1,81 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/DetectorInfo/DetectorTimingsStandard_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/srcs/lardataalg/test/DetectorInfo/clockstest_standard.fcl" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/bin/DetectorTimingsStandard_test" "./clockstest_standard.fcl"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/DetectorInfo/DetectorTimingsStandard_test.d
+Environment variable modifications: 
+ FHICL_FILE_PATH=path_list_prepend:.:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/job:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/job
+ FW_SEARCH_PATH=path_list_prepend:/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/larcorealg/gdml
+Test timeout computed to be: 10000000
+Using default message facility configuration:
+   debugModules: [
+      "*"
+   ]
+   destinations: {
+      statistics: {
+         type: "cout"
+      }
+      stdout: {
+         categories: {
+            default: {
+               limit: -1
+            }
+         }
+         threshold: "DEBUG"
+         type: "cout"
+      }
+   }
+
+%MSG-i MessageFacility:  Early 25-Sep-2026 13:42:47 CDT Initialization
+MessageFacility started.
+%MSG
+%MSG-i Configuration:  main 25-Sep-2026 13:42:47 CDT Initialization
+Complete configuration ('./clockstest_standard.fcl'):
+   process_name: "DetClocksStandardTest"
+   services: {
+      DetectorClocksService: {
+         ClockSpeedExternal: 3.125e1
+         ClockSpeedOptical: 64
+         ClockSpeedTPC: 5.0505
+         ClockSpeedTrigger: 16
+         DefaultBeamTime: 0
+         DefaultTrigTime: 0
+         FramePeriod: 4.05504e2
+         G4RefTime: 0
+         InheritClockConfig: true
+         TrigModuleName: ""
+         TriggerOffsetTPC: 0
+         service_provider: "DetectorClocksServiceStandard"
+      }
+   }
+
+%MSG
+%MSG-i Test:  main 25-Sep-2026 13:42:47 CDT Initialization
+clocks_test base setup complete.
+%MSG
+Verified service implementation for DetectorClocksService: 'DetectorClocksServiceStandard'
+Electronics clock: 0.198 us, 5.0505 MHz
+DetectorTimings::TriggerTime() => 0 us
+DetectorTimings::BeamGateTime() => 0 us
+DetectorTimings::startTime<simulation_time>() => 0 us
+DetectorTimings::startTime<electronics_time, simulation_time>() => -0 ns
+DetectorTimings::toElectronicsTime<simulation_time>(100 ns) => 0.1 us
+DetectorTimings::toTimeScale<electronics_time>(0.1) => 100 ns
+DetectorTimings::toTick<TPCelectronics_tick_d>(100 ns) => 0.50505 #
+DetectorTimings::toTimeScale<simulation_time>(0 us + 100 # = 100 #) => 19800 ns
+DetectorTimings::startTime<trigger_time>() => 0 us
+DetectorTimings::startTime<electronics_time, trigger_time>() => -0 us
+DetectorTimings::toElectronicsTime<trigger_time>(100 us) => 100 us
+DetectorTimings::toTriggerTime<electronics_time>(100) => 100 us
+DetectorTimings::OpticalClockFrequency() => 64 MHz
+DetectorTimings::OpticalClockPeriod() => 0.015625 us
+DetectorTimings::startTime<optical_time>() => 0 us
+DetectorTimings::startTime<optical_time, trigger_time>() => 0 us
+DetectorTimings::toElectronicsTime<optical_tick_d>(900.5 #) => 14.0703 us
+DetectorTimings::toTick<optical_tick_d, electronics time>(14.0703 us) => 900.5 #
+DetectorTimings::toTriggerTime<optical_tick>(900 #) => 14.0625 us
+DetectorTimings::toTick<optical_tick, trigger_time>(14.0703) => 900 #
+DetectorTimings::toTick<electronics_tick>(900 #) => 71 #
+DetectorTimings::toTick<optical_tick, electronics time>(71 #) => 899 #
+DetectorTimings::toTicks<optical_time_ticks_d>(200.008 us) => 12800.5 #
+DetectorTimings::toTicks<optical_time_ticks>(200.008 us) => 12800 #
+%MSG-i Test:  main 25-Sep-2026 13:42:47 CDT Initialization
+clocks_test completed.
+%MSG

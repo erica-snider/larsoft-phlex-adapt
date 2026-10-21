@@ -1,0 +1,6 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataobj/test/RecoBase/Wire_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/lardataobj/bin/Wire_test"
+Working Directory: <BUILD>/lardataobj/test/RecoBase/Wire_test.d
+Test timeout computed to be: 10000000
+Running 2 test cases...
+
+*** No errors detected

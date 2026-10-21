@@ -1,0 +1,7 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataobj/test/RawData/RawDigit_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataobj/bin/RawDigit_test"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataobj/test/RawData/RawDigit_test.d
+Test timeout computed to be: 10000000
+Running 3 test cases...
+
+[1;32;49m*** No errors detected
+[0;39;49m

@@ -1,0 +1,14 @@
+Test command: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/Utilities/datasize_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/bin/datasize_test"
+Working Directory: /exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/build/lardataalg/test/Utilities/datasize_test.d
+Test timeout computed to be: 10000000
+Running 1 test case...
+Tested 256 B
+Tested 4 kiB
+Tested 4 MiB
+Tested 4 GiB
+Tested 4 TiB
+Tested 4 PiB
+Tested 4 EiB
+
+[1;32;49m*** No errors detected
+[0;39;49m

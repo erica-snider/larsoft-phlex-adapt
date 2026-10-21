@@ -1,0 +1,34 @@
+/exp/dune/app/users/esnider/code-spack/larsoft3/mpdtest/mpddev/local/.spack-env/view/libexec/cet_exec_test "--wd" "<BUILD>/lardataalg/test/Utilities/quantities_fhicl_test.d" "--remove-on-failure" "" "--required-files" "" "--datafiles" "" "--skip-return-code" "247" "<BUILD>/lardataalg/bin/quantities_fhicl_test"
+Working Directory: <BUILD>/lardataalg/test/Utilities/quantities_fhicl_test.d
+Test timeout computed to be: 10000000
+Running 2 test cases...
+--------------------------------------------------------------------------------
+===> FHiCL configuration:
+"16ms"
+
+===> Expected configuration: 
+   ## Any parameters prefaced with '#' are optional.
+
+   validatedConfig: {
+
+      start: 0 us  # default
+
+      end: 6000 us  # default
+   }
+
+--------------------------------------------------------------------------------
+===> FHiCL configuration:
+"16000.000000 us"
+
+===> Expected configuration: 
+   ## Any parameters prefaced with '#' are optional.
+
+   validatedConfig: {
+
+      start: 0 us  # default
+
+      end: 6000 us  # default
+   }
+
+
+*** No errors detected

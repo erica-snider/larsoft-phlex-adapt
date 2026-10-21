@@ -1,0 +1,61 @@
+      1 Very low frequency pure sine wave (small size uncompressed): compressed data size: 
+      1 Very low frequency pure sine wave (small size Huffman): compressed data size: 
+      1 Very low frequency pure sine wave (medium size uncompressed): compressed data size: 
+      1 Very low frequency pure sine wave (medium size Huffman): compressed data size: 
+      1 Very low frequency pure sine wave (large size uncompressed): compressed data size: 
+      1 Very low frequency pure sine wave (large size Huffman): compressed data size: 
+      1 uniform small noise (small size uncompressed): compressed data size: 
+      1 uniform small noise (small size Huffman): compressed data size: 
+      1 uniform small noise (medium size uncompressed): compressed data size: 
+      1 uniform small noise (medium size Huffman): compressed data size: 
+      1 uniform small noise (large size uncompressed): compressed data size: 
+      1 uniform small noise (large size Huffman): compressed data size: 
+      1 uniform small noise and offset (small size uncompressed): compressed data size: 
+      1 uniform small noise and offset (small size Huffman): compressed data size: 
+      1 uniform small noise and offset (medium size uncompressed): compressed data size: 
+      1 uniform small noise and offset (medium size Huffman): compressed data size: 
+      1 uniform small noise and offset (large size uncompressed): compressed data size: 
+      1 uniform small noise and offset (large size Huffman): compressed data size: 
+      1 uniform large noise (small size uncompressed): compressed data size: 
+      1 uniform large noise (small size Huffman): compressed data size: 
+      1 uniform large noise (medium size uncompressed): compressed data size: 
+      1 uniform large noise (medium size Huffman): compressed data size: 
+      1 uniform large noise (large size uncompressed): compressed data size: 
+      1 uniform large noise (large size Huffman): compressed data size: 
+      1 Test command: 
+      1 null input data (small size uncompressed): compressed data size: 
+      1 null input data (small size Huffman): compressed data size: 
+      1 null input data (medium size uncompressed): compressed data size: 
+      1 null input data (medium size Huffman): compressed data size: 
+      1 null input data (large size uncompressed): compressed data size: 
+      1 null input data (large size Huffman): compressed data size: 
+      1 Low frequency pure sine wave (small size uncompressed): compressed data size: 
+      1 Low frequency pure sine wave (small size Huffman): compressed data size: 
+      1 Low frequency pure sine wave (medium size uncompressed): compressed data size: 
+      1 Low frequency pure sine wave (medium size Huffman): compressed data size: 
+      1 Low frequency pure sine wave (large size uncompressed): compressed data size: 
+      1 Low frequency pure sine wave (large size Huffman): compressed data size: 
+      1 High frequency pure sine wave (small size uncompressed): compressed data size: 
+      1 High frequency pure sine wave (small size Huffman): compressed data size: 
+      1 High frequency pure sine wave (medium size uncompressed): compressed data size: 
+      1 High frequency pure sine wave (medium size Huffman): compressed data size: 
+      1 High frequency pure sine wave (large size uncompressed): compressed data size: 
+      1 High frequency pure sine wave (large size Huffman): compressed data size: 
+      1 Gaussian small noise and offset (small size uncompressed): compressed data size: 
+      1 Gaussian small noise and offset (small size Huffman): compressed data size: 
+      1 Gaussian small noise and offset (medium size uncompressed): compressed data size: 
+      1 Gaussian small noise and offset (medium size Huffman): compressed data size: 
+      1 Gaussian small noise and offset (large size uncompressed): compressed data size: 
+      1 Gaussian small noise and offset (large size Huffman): compressed data size: 
+      1 Gaussian large noise and offset (small size uncompressed): compressed data size: 
+      1 Gaussian large noise and offset (small size Huffman): compressed data size: 
+      1 Gaussian large noise and offset (medium size uncompressed): compressed data size: 
+      1 Gaussian large noise and offset (medium size Huffman): compressed data size: 
+      1 Gaussian large noise and offset (large size uncompressed): compressed data size: 
+      1 Gaussian large noise and offset (large size Huffman): compressed data size: 
+      1 constant input data (small size uncompressed): compressed data size: 
+      1 constant input data (small size Huffman): compressed data size: 
+      1 constant input data (medium size uncompressed): compressed data size: 
+      1 constant input data (medium size Huffman): compressed data size: 
+      1 constant input data (large size uncompressed): compressed data size: 
+      1 constant input data (large size Huffman): compressed data size: 
