@@ -44,13 +44,40 @@
 set -u
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SRCS_DIR="$(cd "$SCRIPT_DIR/../../.." && pwd)"          # .../mpddev/srcs
-MIGRATION_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"           # .../spdlog-migration
 
-PACKAGES=(larcoreobj larcorealg lardataobj lardataalg)
+# SRCS_DIR is discovered from the invocation directory, not derived from this
+# script's location: the guard rails now live in larsoft-phlex-adapt, outside
+# any mpd project. See mpd-paths.sh.
+# shellcheck source=mpd-paths.sh
+source "$SCRIPT_DIR/mpd-paths.sh"
 
-LOGGING_CXX="$SRCS_DIR/larcoreobj/larcoreobj/LoggingUtil/Logging.cxx"
-HAZARD_FIXTURE="$MIGRATION_DIR/prototypes/02-runtime-format-string-hazard.cxx"
+SRCS_DIR=""
+mpd_srcs_or_die() {
+  if [[ -z "$SRCS_DIR" ]]; then
+    mpd_resolve || exit 1
+    SRCS_DIR="$MPD_SRCS"
+  fi
+}
+
+PACKAGES=("${MPD_PACKAGES[@]}")
+
+# Resolved lazily: SRCS_DIR is not known until mpd_srcs_or_die() runs.
+logging_cxx_path() {
+  mpd_srcs_or_die
+  printf '%s\n' "$SRCS_DIR/larcoreobj/larcoreobj/LoggingUtil/Logging.cxx"
+}
+
+# The hazard fixture ships WITH the tooling, so it is located relative to this
+# repo (MIGRATION_DIR), never relative to the mpd project. Tolerate both the
+# flat prototypes/ layout and the nested prototypes/prototypes/ one.
+hazard_fixture_path() {
+  local f
+  for f in "$MIGRATION_DIR/prototypes/02-runtime-format-string-hazard.cxx" \
+           "$MIGRATION_DIR/prototypes/prototypes/02-runtime-format-string-hazard.cxx"; do
+    [[ -f "$f" ]] && { printf '%s\n' "$f"; return 0; }
+  done
+  return 1
+}
 
 CALL_RE='spdlog::(trace|debug|info|warn|error|critical|log)[[:space:]]*\('
 
@@ -70,6 +97,19 @@ done
 if [[ $self_test -eq 1 ]]; then
   echo "== G2 self-test: two-sided acceptance =="
   echo
+
+  # Resolve in THIS shell (not a subshell) so MPD_NAME/MPD_SRCS are available
+  # to the diagnostics below.
+  mpd_srcs_or_die
+  LOGGING_CXX="$SRCS_DIR/larcoreobj/larcoreobj/LoggingUtil/Logging.cxx"
+  if [[ ! -f "$LOGGING_CXX" ]]; then
+    echo "   FAIL: logging implementation not found at:"
+    echo "         $LOGGING_CXX"
+    echo "         (mpd project '${MPD_NAME:-unknown}' -- has F2 been done in this project?)"
+    echo
+    echo "G2 self-test: FAILED"
+    exit 1
+  fi
   echo "-- expect CLEAN: $LOGGING_CXX"
   if "${BASH_SOURCE[0]}" "$LOGGING_CXX"; then
     echo "   ok (clean, as required)"
@@ -79,6 +119,14 @@ if [[ $self_test -eq 1 ]]; then
     clean_ok=0
   fi
   echo
+
+  if ! HAZARD_FIXTURE="$(hazard_fixture_path)"; then
+    echo "   FAIL: hazard fixture 02-runtime-format-string-hazard.cxx not found"
+    echo "         under $MIGRATION_DIR/prototypes/"
+    echo
+    echo "G2 self-test: FAILED"
+    exit 1
+  fi
   echo "-- expect FLAGGED: $HAZARD_FIXTURE"
   if "${BASH_SOURCE[0]}" "$HAZARD_FIXTURE"; then
     echo "   FAIL: the hazard fixture should be flagged but was reported clean"
@@ -98,9 +146,28 @@ if [[ $self_test -eq 1 ]]; then
 fi
 
 if [[ ${#targets[@]} -eq 0 ]]; then
+  mpd_srcs_or_die
   for p in "${PACKAGES[@]}"; do
     [[ -d "$SRCS_DIR/$p" ]] && targets+=("$SRCS_DIR/$p")
   done
+else
+  # Accept srcs-relative paths (e.g. `larcorealg/larcorealg/Geometry`) as well
+  # as absolute/CWD-relative ones, matching grep-gate.sh.
+  declare -a resolved=()
+  for t in "${targets[@]}"; do
+    if [[ -e "$t" ]]; then
+      resolved+=("$t")
+    else
+      mpd_srcs_or_die
+      if [[ -e "$SRCS_DIR/$t" ]]; then
+        resolved+=("$SRCS_DIR/$t")
+      else
+        echo "format-string-lint: path not found: $t" >&2
+        exit 2
+      fi
+    fi
+  done
+  targets=("${resolved[@]}")
 fi
 
 # Collect candidate files (.h .hh .hpp .cxx .cc .cpp), excluding the migration

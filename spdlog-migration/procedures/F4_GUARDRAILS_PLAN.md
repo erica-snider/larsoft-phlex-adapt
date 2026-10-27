@@ -7,15 +7,25 @@ and so `GATE B` has real checks behind it rather than assertions.
 **Scope.** This plan covers only the F4 guard rails. It does not migrate any call site
 and does not touch F1 (`spdlog` in `spack.yaml`), which is tracked separately.
 
-**Deliverables.** Four scripts plus one generated manifest, all under
+**Deliverables.** Scripts plus one generated manifest, all under
 `spdlog-migration/guardrails/`:
 
 | ID | Artifact | Per-file? | Purpose |
 |---|---|---|---|
+| — | `mpd-paths.sh` | no | discover the mpd project from the invocation directory; shared by all of the below |
 | G0 | `env.sh` | no | activate the build/run environment; sourced by the others |
 | G1 | `grep-gate.sh` | no | fail if mf identifiers reappear |
 | G2 | `format-string-lint.sh` | no | fail on a non-literal spdlog format argument |
-| G3 | `outdiff.sh` + `targets.tsv` | **yes, via generated manifest** | normalized before/after output comparison |
+| G3 | `outdiff.sh` + `baselines/<project>/targets.tsv` | **yes, via generated manifest** | normalized before/after output comparison |
+
+**Location (changed).** This tooling was originally checked in *inside* the
+package being migrated and derived every path by walking up a fixed number of
+directory levels. It now lives in the `larsoft-phlex-adapt` repo, outside any mpd
+project, so that walk no longer reaches a `srcs` tree. `mpd-paths.sh` replaces it:
+the project is discovered from the invocation directory, or from `MPD_PROJECT`,
+and resolution **fails loudly** rather than silently scanning nothing. Because the
+tooling is now shared between projects, baselines and the manifest are namespaced
+per project under `baselines/<project>/`.
 
 ---
 

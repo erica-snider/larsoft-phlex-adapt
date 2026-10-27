@@ -1,23 +1,52 @@
 # Session state — messagefacility → spdlog migration
 
-**Last updated:** 2026-09-02
-**Status:** Planning complete for three packages. **No production code has been modified yet.**
+**Last updated:** 2026-10-27
+**Status:** `mpddev` is migrated (grep gate clean); the tooling has been relocated
+to the `larsoft-phlex-adapt` repo and generalized to any mpd project.
 
 Read this file first when resuming.
 
+> **Caution — this file is a point-in-time snapshot.** Sections 4–8 below were
+> written on 2026-09-02, before any code was migrated, and describe the
+> *pre-migration* state of `mpddev`. They are retained for the reasoning they
+> capture (the design constraints and traps), not as current fact. Where they
+> conflict with a live check, the live check wins. Verify with
+> `guardrails/mpd-paths.sh --check` and `guardrails/grep-gate.sh`.
+
 ---
+
+## 0. Current layout (2026-10-27)
+
+The tooling now lives in the **`larsoft-phlex-adapt`** repo under
+`spdlog-migration/`, outside any mpd project:
+
+| Directory | Contents |
+|---|---|
+| `procedures/` | this file, `PROCEDURE.md`, `PATTERN_CATALOG.md`, `OPEN_QUESTION_ANSWERS.md`, `F4_GUARDRAILS_PLAN.md`, `BUILDING_WITH_SPACK_MPD.md` |
+| `guardrails/` | `mpd-paths.sh`, `env.sh`, `grep-gate.sh`, `format-string-lint.sh`, `gen-targets.sh`, `outdiff.sh`, `normalize.sed`, `baselines/<project>/` |
+| `prototypes/` | the 12 compile-verified prototypes, `build-and-run.sh`, `verify-installed-header.sh` (the F3 gate) |
+| `plans/` | superseded plan revisions, kept for history only — **do not drive work from these** |
+| `kilo/.kilo/` | the `/spdlog-migrate` slash command, soft-linked into place for VS Code |
+
+The mpd project is discovered from the invocation directory; more than one may
+exist side by side (`mpddev`, `larsoftobj`) at different migration stages.
 
 ## 1. Where things stand
 
 | Deliverable | Path | Status |
 |---|---|---|
-| Original plan (not mine) | `../MIGRATION_PLAN.md` | superseded; kept for reference |
-| Rev 2 plan — `larcorealg` only | `../SPDLOG_MIGRATION_PLAN.md` | superseded by rev 3 **for the `Logging.h` design**; its `larcorealg` analysis is still valid |
-| **Rev 3 plan — 3 packages** | `../SPDLOG_MIGRATION_PLAN_MULTIPACKAGE.md` | **current** |
-| Compile-verified prototypes | `prototypes/` | reproduce with `prototypes/build-and-run.sh` |
+| Original plan (not mine) | `plans/MIGRATION_PLAN.md` | superseded; kept for reference |
+| Rev 2 plan — `larcorealg` only | `plans/SPDLOG_MIGRATION_PLAN.md` | superseded by rev 3 **for the `Logging.h` design** |
+| Rev 3 plan — 3 packages | `plans/SPDLOG_MIGRATION_PLAN_MULTIPACKAGE.md` | superseded by `procedures/` |
+| **Live procedure** | `procedures/PROCEDURE.md` + `PATTERN_CATALOG.md` | **current — drive work from these** |
+| Compile-verified prototypes | `prototypes/` | `build-and-run.sh`; F3 gate is `verify-installed-header.sh` |
 
-**Production code changed so far: none.** Only planning documents and these
-prototypes exist. `git status` in all three repos shows no modified tracked files.
+**`mpddev`:** migrated. `grep-gate.sh` reports 0 live sites across all four
+packages; the only matches are the two allowlisted comment-only references in
+`larcoreobj/larcoreobj/LoggingUtil/`. `Logging.h`/`Logging.cxx` exist there and
+pass the F3 gate.
+
+**`larsoftobj`:** unmigrated, and has no `LoggingUtil/` (F2 not yet done there).
 
 ---
 
@@ -102,7 +131,7 @@ Bulk of `lardataalg`: `test/DetectorInfo/DetectorTimingsStandard_test.cc` (51).
 - `spdlog::spdlog` carries `SPDLOG_SHARED_LIB;FMT_SHARED;SPDLOG_COMPILED_LIB`.
 - **No `spdlog/mdc.h`** in this build → mf's context singlet/iteration cannot be
   emulated; those uses are simply dropped.
-- `spdlog` is **not yet** in `mpddev/local/spack.yaml`; `messagefacility` still is.
+- `spdlog` IS now in `mpddev/local/spack.yaml` (spdlog@=1.16.0 cxxstd=17); `messagefacility@=2.10.05` is also still listed. NOTE: 1.16.0 differs from the 1.12.0 these notes were written against — re-verify version-specific claims.
 - Local `g++` is 11.5.0; the spack toolchain is gcc 12.2.0. Prototypes compile under both.
 
 ---
@@ -161,10 +190,18 @@ destinations, and the deprecation window for `SetupMessageFacility` forwarders.
 
 ## 8. Next action when resuming
 
-1. Answer the `Logging.h` location question (§6).
-2. Then start **Phase A** of `../SPDLOG_MIGRATION_PLAN_MULTIPACKAGE.md`:
-   add spdlog to `spack.yaml`, create `Logging.h` with the rev-3 fixes (move ctor +
-   `std::ios_base` manipulator overload), and write its unit test — the test should
-   cover the same cases as prototypes 07, 09, 10 and 11.
+**Superseded.** The original next-action list (answer the `Logging.h` location
+question, then run Phase A of the rev-3 plan) is **done** for `mpddev`: the
+location was resolved to `larcoreobj/larcoreobj/LoggingUtil/Logging.h`, the header
+exists with the move-ctor and `std::ios_base` fixes, and the F3 gate passes.
 
-Nothing in Phases B-E should begin until the Phase A foundation test is green.
+To resume, use the workflow rather than the plans:
+
+1. From inside the target project's `srcs` directory, run
+   `guardrails/mpd-paths.sh --check` and confirm the project.
+2. Invoke `/spdlog-migrate <dir>` (see `kilo/.kilo/command/spdlog-migrate.md`),
+   which executes `PROCEDURE.md` Part I (F0–F5) then Part II (P0–P7).
+
+For a project that has never been migrated (e.g. `larsoftobj`), expect F2 to fail
+first: it has no `LoggingUtil/`. That header must be added to that project before
+Part II can start.

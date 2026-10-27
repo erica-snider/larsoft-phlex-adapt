@@ -65,7 +65,17 @@ emits nothing and formats nothing; constructed-but-never-streamed emits nothing;
 ## F4. Guard rails installed
 
 Install **before** any bulk editing, not after. Implemented per
-`F4_GUARDRAILS_PLAN.md`, checked in under `spdlog-migration/guardrails/`:
+`F4_GUARDRAILS_PLAN.md`, checked in under `spdlog-migration/guardrails/` in the
+`larsoft-phlex-adapt` repo.
+
+**Location note.** This tooling lives outside any mpd project and is shared
+across projects. Every script discovers the mpd project from the invocation
+directory (a directory containing `srcs/`, `local/spack.yaml`, `build/`), so run
+them from inside the target project's `srcs` tree, or set `MPD_PROJECT`. Confirm
+with `guardrails/mpd-paths.sh --check` before trusting any result — several
+projects can coexist at different migration stages, and pointing a guard rail at
+the wrong one yields a confidently wrong answer. Baselines and the target
+manifest are kept per project under `guardrails/baselines/<project>/`.
 
 1. grep gate — fail if `mf::` / `MF_LOG_` / `messagefacility` reappears.
    `guardrails/grep-gate.sh [path ...]` (default: the four package trees).
@@ -218,8 +228,11 @@ the file to find out that it has not. So do not rely on believing. Run the grep 
 the single file and require exit 0:
 
 ```
-spdlog-migration/guardrails/grep-gate.sh <path/to/file>     # exit 0 = no live sites
+<.../spdlog-migration>/guardrails/grep-gate.sh <path/to/file>   # exit 0 = no live sites
 ```
+
+The path may be absolute, relative to your current directory, or relative to the
+discovered project's `srcs` (e.g. `larcorealg/larcorealg/Geometry/PlaneGeo.cxx`).
 
 Exit 1 with a non-empty list means the file is **still mid-edit**, regardless of how
 complete it feels. Go back to step 3 and convert what it names. Running this before

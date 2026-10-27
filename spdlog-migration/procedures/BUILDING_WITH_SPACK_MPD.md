@@ -5,9 +5,32 @@
 The C++ code we are using is packaged with Spack and is being developed
 with `spack mpd`.
 
-After initializing the build environment with larcorealg/spdlog-migration/guardrails/env.sh, 
-use the following commmand to build the code in mpddev/srcs:
-````
+## Where this tooling lives
+
+The migration tooling (guard rails, procedures, prototypes) lives in the
+**`larsoft-phlex-adapt`** repository, under `spdlog-migration/`. It is *outside*
+any mpd project, and is shared across projects.
+
+The mpd project you operate on is **discovered from your current directory**: a
+project root is a directory containing `srcs/`, `local/spack.yaml` and `build/`.
+Run the guard rails from inside the project's `srcs` tree. Check what was
+discovered at any time with:
+
+```
+<...>/spdlog-migration/guardrails/mpd-paths.sh --check
+```
+
+Override with `MPD_PROJECT=<name|absolute path>`. More than one project may exist
+side by side (e.g. `mpddev`, `larsoftobj`) at different migration stages, so
+confirm the project before trusting any result.
+
+## Building
+
+After initializing the build environment by **sourcing**
+`spdlog-migration/guardrails/env.sh` (it activates the spack environment for the
+discovered project), use the following command to build the code in that
+project's `srcs`:
+```
 spack mpd build
 ```
 To run the unit tests, from the package root directory:
@@ -18,12 +41,12 @@ where "ctest arguments" are passed directly to the `ctest` command line (run int
 `spack mpd test`).
 
 Alternatively, `cmake` and `ctest` commands can be run directly within the
-mpddev/build directory after first activating the spack environment:
+project's `build` directory after first activating the spack environment:
 ```
 spack env activate <path to local>
 ```
 where "path to local" is the absolute path, or the relative path from the current directory
-to the `mpddev/local` directory. So, if in the `build` directory, then:
+to that project's `local` directory. So, if in the `build` directory, then:
 ```
 spack env activate ../local
 ```

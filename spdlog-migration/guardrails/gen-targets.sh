@@ -58,15 +58,68 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent            # .../spdlog-migration/guardrails
 MIGRATION_DIR = SCRIPT_DIR.parent                        # .../spdlog-migration
-LARCOREALG_DIR = MIGRATION_DIR.parent                     # .../larcorealg
-SRCS_DIR = LARCOREALG_DIR.parent                           # .../mpddev/srcs
-MPDDEV_DIR = SRCS_DIR.parent                                # .../mpddev
+
+
+def _discover_mpd():
+    """Locate the mpd project the same way mpd-paths.sh does.
+
+    The guard rails now live in the larsoft-phlex-adapt repo, OUTSIDE any mpd
+    project, so the project cannot be derived from this file's location. It is
+    discovered by walking up from the invocation directory (or $MPD_PROJECT).
+
+    An mpd project root contains: srcs/, local/spack.yaml, build/.
+    """
+    def is_root(p: Path) -> bool:
+        return (p / "srcs").is_dir() and (p / "local" / "spack.yaml").is_file() \
+            and (p / "build").is_dir()
+
+    def walk_up(start: Path):
+        d = start.resolve()
+        while True:
+            if is_root(d):
+                return d
+            if d.parent == d:
+                return None
+            d = d.parent
+
+    explicit = os.environ.get("MPD_PROJECT", "").strip()
+    if explicit:
+        p = Path(explicit)
+        if is_root(p):
+            return p.resolve()
+        anchor = walk_up(Path.cwd())
+        if anchor is not None:
+            cand = anchor.parent / explicit
+            if is_root(cand):
+                return cand.resolve()
+        sys.exit(f"gen-targets: MPD_PROJECT='{explicit}' is not an mpd project root "
+                 f"(needs srcs/, local/spack.yaml, build/)")
+
+    root = walk_up(Path(os.environ.get("MPD_START", str(Path.cwd()))))
+    if root is None:
+        sys.exit(
+            "gen-targets: could not locate an mpd project.\n"
+            f"  Looked upward from: {Path.cwd()}\n"
+            "  An mpd project root must contain: srcs/  local/spack.yaml  build/\n"
+            "  Run this from inside an mpd project (e.g. <project>/srcs/<package>),\n"
+            "  or set MPD_PROJECT=/abs/path/to/project (or a project name)."
+        )
+    return root
+
+
+MPDDEV_DIR = _discover_mpd()                  # the mpd project root
+MPD_NAME = MPDDEV_DIR.name
+SRCS_DIR = MPDDEV_DIR / "srcs"
 
 DEFAULT_BUILD_DIR = MPDDEV_DIR / "build"
 DEFAULT_LOCAL_DIR = MPDDEV_DIR / "local"
 ENV_SH = SCRIPT_DIR / "env.sh"
 GREP_GATE = SCRIPT_DIR / "grep-gate.sh"
-TARGETS_TSV = SCRIPT_DIR / "targets.tsv"
+
+# Per-project, matching outdiff.sh: a manifest maps one project's sources to
+# that project's tests, so it must not be shared between projects.
+BASELINE_DIR = SCRIPT_DIR / "baselines" / MPD_NAME
+TARGETS_TSV = BASELINE_DIR / "targets.tsv"
 
 PACKAGES = ["larcoreobj", "larcorealg", "lardataobj", "lardataalg"]
 
@@ -393,6 +446,7 @@ def main():
             print("gen-targets --check: FAIL -- targets.tsv is stale; re-run without --check", file=sys.stderr)
             sys.exit(1)
 
+    TARGETS_TSV.parent.mkdir(parents=True, exist_ok=True)
     TARGETS_TSV.write_text(content)
     n_mf = sum(1 for r in rows if r[4] == "1")
     print(f"gen-targets: wrote {TARGETS_TSV} ({len(rows)} tests, {n_mf} marked has_mf_sites=1)", file=sys.stderr)

@@ -76,18 +76,58 @@
 
 set -u
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"      # .../larcorealg/spdlog-migration/guardrails
-MIGRATION_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"                    # .../larcorealg/spdlog-migration
-LARCOREALG_DIR="$(cd "$MIGRATION_DIR/.." && pwd)"                # .../larcorealg
-SRCS_DIR="$(cd "$LARCOREALG_DIR/.." && pwd)"                     # .../mpddev/srcs
-MPDDEV_DIR="$(cd "$SRCS_DIR/.." && pwd)"                         # .../mpddev
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"      # .../spdlog-migration/guardrails
 
-BUILD_DIR="${BUILD_DIR:-$MPDDEV_DIR/build}"
-LOCAL_DIR="${LOCAL_DIR:-$MPDDEV_DIR/local}"
+# The mpd project is DISCOVERED from the invocation directory; it is no longer
+# derivable from this script's location, because the guard rails now live in
+# the larsoft-phlex-adapt repo rather than inside the package being migrated.
+# shellcheck source=mpd-paths.sh
+source "$SCRIPT_DIR/mpd-paths.sh"
+mpd_require                                                      # MPD_ROOT/SRCS/BUILD/LOCAL
+
+SRCS_DIR="$MPD_SRCS"
+MPDDEV_DIR="$MPD_ROOT"
+
+BUILD_DIR="$MPD_BUILD"
+LOCAL_DIR="$MPD_LOCAL"
 ENV_SH="$SCRIPT_DIR/env.sh"
 NORMALIZE_SED="$SCRIPT_DIR/normalize.sed"
-TARGETS_TSV="$SCRIPT_DIR/targets.tsv"
-BASELINE_DIR="$SCRIPT_DIR/baselines"
+
+# Baselines and the target manifest are PER MPD PROJECT. The tooling repo is
+# shared between projects, but a baseline is a capture of one project's test
+# output: comparing mpddev's "after" against larsoftobj's "before" would be
+# meaningless, and silently so. They are therefore namespaced by project name.
+#
+# Historical note: the original single-project layout kept these flat in
+# guardrails/{baselines,targets.tsv}. Those files are the mpddev captures and
+# are migrated into baselines/mpddev/ on first use (see migrate_legacy_layout).
+BASELINE_DIR="$SCRIPT_DIR/baselines/$MPD_NAME"
+TARGETS_TSV="$BASELINE_DIR/targets.tsv"
+LEGACY_BASELINE_DIR="$SCRIPT_DIR/baselines"
+LEGACY_TARGETS_TSV="$SCRIPT_DIR/targets.tsv"
+
+migrate_legacy_layout() {
+  # One-time, idempotent move of the flat single-project layout into the
+  # per-project one. Only runs when the flat layout still has capture files.
+  shopt -s nullglob
+  local legacy=("$LEGACY_BASELINE_DIR"/*.txt)
+  shopt -u nullglob
+  if [[ ${#legacy[@]} -gt 0 || -f "$LEGACY_TARGETS_TSV" ]]; then
+    # The flat captures were taken from mpddev; only adopt them as such.
+    local dest="$LEGACY_BASELINE_DIR/mpddev"
+    mkdir -p "$dest"
+    if [[ ${#legacy[@]} -gt 0 ]]; then
+      echo "outdiff: migrating ${#legacy[@]} legacy baseline file(s) -> baselines/mpddev/" >&2
+      mv "${legacy[@]}" "$dest/" 2>/dev/null || true
+    fi
+    if [[ -f "$LEGACY_TARGETS_TSV" ]]; then
+      echo "outdiff: migrating legacy targets.tsv -> baselines/mpddev/targets.tsv" >&2
+      mv "$LEGACY_TARGETS_TSV" "$dest/targets.tsv" 2>/dev/null || true
+    fi
+  fi
+}
+migrate_legacy_layout
+mkdir -p "$BASELINE_DIR"
 
 # Conservative default (not `nproc`): this may run on a shared build machine
 # alongside other users' work. Override with OUTDIFF_JOBS=<N>.

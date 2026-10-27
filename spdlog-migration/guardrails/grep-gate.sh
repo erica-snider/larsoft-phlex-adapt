@@ -32,22 +32,46 @@
 # with --staged, which are interpreted as that repo's pathspecs). Run once per
 # package repo as part of that repo's pre-commit hook.
 #
-# Established live-site baseline (2026-09-22, unmigrated tree, this script):
-#   larcoreobj   : 0 files with live sites (LoggingUtil/* only match in comments/
-#                  doc text, which this gate's patterns do not flag -- see below)
-#   larcorealg   : ~29 files with mf:: / MF_LOG_ / messagefacility / MF_MessageLogger
-#   lardataobj   : ~9 files
-#   lardataalg   : ~12 files
-# A gate that reports 0 for larcorealg/lardataobj/lardataalg today is broken --
-# rerun with --baseline-count and compare before trusting a "clean" result.
+# Live-site history (run with --baseline-count to reproduce):
+#
+#   2026-09-22, mpddev, UNMIGRATED:
+#     larcoreobj ~0 files | larcorealg ~29 | lardataobj ~9 | lardataalg ~12
+#   2026-10-27, mpddev, MIGRATED:
+#     0 live sites in all four packages; the only matches are the two
+#     allowlisted comment-only references in larcoreobj/LoggingUtil/.
+#
+# Reading a "clean" result correctly:
+#   - A clean result is only meaningful if the tree was expected to be clean.
+#     Check WHICH project you are pointed at first (`mpd-paths.sh --check`):
+#     mpddev is already migrated, so 0 is correct there, whereas an
+#     unmigrated project (e.g. larsoftobj) reporting 0 means this gate is
+#     scanning the wrong tree.
+#   - Note the pattern also matches migration DOCUMENTATION; those paths are
+#     excluded by EXCLUDE_DIR_PATTERNS/EXCLUDE_FILE_PATTERNS below, so a raw
+#     `rg` count over a package will be much higher than this gate's count.
+#     That difference is expected, not a bug.
 
 set -u
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# guardrails -> spdlog-migration -> larcorealg -> srcs
-SRCS_DIR="$(cd "$SCRIPT_DIR/../../.." && pwd)"   # .../mpddev/srcs
 
-PACKAGES=(larcoreobj larcorealg lardataobj lardataalg)
+# The guard rails now live in the larsoft-phlex-adapt repo, OUTSIDE any mpd
+# project, so SRCS_DIR can no longer be derived by walking up from this script.
+# It is discovered from the invocation directory instead -- see mpd-paths.sh.
+# shellcheck source=mpd-paths.sh
+source "$SCRIPT_DIR/mpd-paths.sh"
+
+# Only resolve the project when we actually need a default scan root: explicit
+# path arguments and --staged work fine outside a project.
+SRCS_DIR=""
+mpd_srcs_or_die() {
+  if [[ -z "$SRCS_DIR" ]]; then
+    mpd_resolve || exit 1
+    SRCS_DIR="$MPD_SRCS"
+  fi
+}
+
+PACKAGES=("${MPD_PACKAGES[@]}")
 
 # --- Exclusions -------------------------------------------------------------
 # Everything here is subject matter (mf identifiers are the topic, not a live
@@ -152,11 +176,33 @@ if [[ "$mode" == "staged" ]]; then
   targets=("${staged[@]}")
 else
   if [[ ${#scan_paths[@]} -gt 0 ]]; then
-    targets=("${scan_paths[@]}")
+    # Explicit paths: accept absolute, CWD-relative, or srcs-relative
+    # (e.g. `larcorealg/larcorealg/Geometry/PlaneGeo.cxx`) so the command can
+    # be driven with the same <dir> argument the workflow was invoked with.
+    for p in "${scan_paths[@]}"; do
+      if [[ -e "$p" ]]; then
+        targets+=("$p")
+      else
+        mpd_srcs_or_die
+        if [[ -e "$SRCS_DIR/$p" ]]; then
+          targets+=("$SRCS_DIR/$p")
+        else
+          echo "grep-gate: path not found: $p" >&2
+          echo "           (tried as given, and under $SRCS_DIR/)" >&2
+          exit 2
+        fi
+      fi
+    done
   else
+    mpd_srcs_or_die
     for p in "${PACKAGES[@]}"; do
       [[ -d "$SRCS_DIR/$p" ]] && targets+=("$SRCS_DIR/$p")
     done
+    if [[ ${#targets[@]} -eq 0 ]]; then
+      echo "grep-gate: none of (${PACKAGES[*]}) found under $SRCS_DIR" >&2
+      echo "           Wrong mpd project? Set MPD_PROJECT=<name> to choose." >&2
+      exit 2
+    fi
   fi
 fi
 
